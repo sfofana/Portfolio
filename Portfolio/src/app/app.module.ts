@@ -9,6 +9,7 @@ import { WorkComponent } from './work-experience/work/work.component';
 import { SkillComponent } from './skill-matrix/skill/skill.component';
 import { ProjectsComponent } from './project/projects/projects.component';
 import { FreeComponent } from './freelance/free/free.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FreeComponent } from './freelance/free/free.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     NavbarModule,
     WavesModule,
