@@ -1,0 +1,136 @@
+<div class="row">
+    <div class="column1">
+    <mdb-card>
+    <mdb-card-body>
+      <mdb-card-title>
+        <h4>Web Technologies</h4>
+      </mdb-card-title>
+      <canvas mdbChart
+      [chartType]="chartType"
+      [datasets]="chartDatasets1"
+      [labels]="chartLabels1"
+      [colors]="chartColors"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+    </mdb-card-body>
+  </mdb-card>
+
+  <mdb-card>
+    <mdb-card-body>
+      <mdb-card-title>
+        <h4>Core Framework</h4>
+      </mdb-card-title>
+      <canvas mdbChart
+      [chartType]="chartType"
+      [datasets]="chartDatasets2"
+      [labels]="chartLabels2"
+      [colors]="chartColors"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+    </mdb-card-body>
+  </mdb-card>
+  
+  <mdb-card>
+    <!--Card image-->
+    <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img> -->
+    <!--Card content-->
+    <mdb-card-body>
+  
+      <!--Title-->
+      <mdb-card-title>
+        <h4>Server-Side</h4>
+      </mdb-card-title>
+  
+      <!--Text-->
+      <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+        content.
+      </mdb-card-text>
+  
+      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+    </mdb-card-body>
+  </mdb-card>
+</div>
+<div class="column2">
+    <mdb-card>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>Testing Tools</h4>
+          </mdb-card-title>
+          <canvas mdbChart
+          [chartType]="chartType"
+          [datasets]="chartDatasets4"
+          [labels]="chartLabels4"
+          [colors]="chartColors"
+          [options]="chartOptions"
+          [legend]="true"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+        </canvas>
+        </mdb-card-body>
+      </mdb-card>
+
+    <mdb-card>
+    <mdb-card-body>
+      <mdb-card-title>
+        <h4>Languages</h4>
+      </mdb-card-title>
+      <canvas mdbChart
+      [chartType]="chartType"
+      [datasets]="chartDatasets5"
+      [labels]="chartLabels5"
+      [colors]="chartColors"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+    </mdb-card-body>
+  </mdb-card>
+  
+      <mdb-card>
+        <!--Card image-->
+        <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img> -->
+        <!--Card content-->
+        <mdb-card-body>
+      
+          <!--Title-->
+          <mdb-card-title>
+            <h4>DevOps</h4>
+          </mdb-card-title>
+      
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </mdb-card-text>
+      
+          <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="column3">
+        <mdb-card>
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Web & Micro Services</h4>
+              </mdb-card-title>
+              <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="chartDatasets2"
+              [labels]="chartLabels2"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+
+        </div>
+</div>

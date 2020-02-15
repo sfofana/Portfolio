@@ -1,12 +1,39 @@
-<!-- Start your project here-->
-<div style="height: 100vh">
-  <div class="flex-center flex-column">
-    <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+<section class="main">
+    <mdb-navbar SideClass="navbar navbar-expand-lg mdb-color">
+        <mdb-navbar-brand>
+            <a href="#" class="navbar-brand"></a>
+        </mdb-navbar-brand>
+      </mdb-navbar>
 
-    <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
-    <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+    <app-home></app-home>
 
-    <p class="animated fadeIn text-muted">MDB Team</p>
-  </div>
-</div>
-<!-- /Start your project here-->
+<mdb-navbar SideClass="navbar navbar-expand-lg mdb-color">
+  <mdb-navbar-brand>
+      <a href="#" class="navbar-brand"></a>
+  </mdb-navbar-brand>
+  <links>
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+              <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect>Work Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Freelance</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect>Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Technologies</a>
+        </li>
+      </ul>
+  </links>
+</mdb-navbar>
+
+<app-skill></app-skill>
+<app-projects></app-projects>
+<app-work></app-work>
+<app-free></app-free>
+</section>
