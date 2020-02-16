@@ -15,8 +15,8 @@
       <mdb-card-text class="text-light"> Some quick example text to build on the card title and make up the bulk of the card's
         content.
       </mdb-card-text>
-  
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+      <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
+      mdbWavesEffect>LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
   <mdb-card>
@@ -35,7 +35,8 @@
         content.
       </mdb-card-text>
   
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+      <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="gadget.show()"
+      mdbWavesEffect>LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
   <mdb-card>
@@ -54,7 +55,8 @@
         content.
       </mdb-card-text>
   
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+      <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
+      mdbWavesEffect>LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
 </div>
@@ -75,7 +77,8 @@
             content.
           </mdb-card-text>
       
-          <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+          <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="weather.show()"
+            mdbWavesEffect>LAUNCH DEMO</button>
         </mdb-card-body>
       </mdb-card>
       <mdb-card>
@@ -94,7 +97,8 @@
             content.
           </mdb-card-text>
       
-          <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+          <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="dictionary.show()"
+            mdbWavesEffect>LAUNCH DEMO</button>
         </mdb-card-body>
       </mdb-card>
       <mdb-card>
@@ -113,7 +117,8 @@
             content.
           </mdb-card-text>
       
-          <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+          <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="hospital.show()"
+                mdbWavesEffect>LAUNCH DEMO</button>
         </mdb-card-body>
       </mdb-card>
     </div>
@@ -134,17 +139,15 @@
                 content.
               </mdb-card-text>
           
-              <a href="#" mdbBtn color="primary" mdbWavesEffect>LAUNCH DEMO</a>
+              <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="axion.show()"
+              mdbWavesEffect>LAUNCH DEMO</button>
             </mdb-card-body>
           </mdb-card>
         </div>
 </div>
 
-<!-- Web Modal -->
-  <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="frameWeb.show()"
-  mdbWavesEffect>LAUNCH DEMO</button>
-
-<div mdbModal #frameWeb="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!-- JS.Fofana Bank V2.1 Modal -->
+<div mdbModal #bankv21="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -176,17 +179,14 @@
         </div>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>TRY</button>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
-          (click)="frameWeb.hide()">Close</button>
+          (click)="bankv21.hide()">Close</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Store Modal -->
-<button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="store.show()"
-mdbWavesEffect>LAUNCH DEMO</button>
-
-<div mdbModal #store="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!-- Gadget Tree Modal -->
+<div mdbModal #gadget="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
@@ -219,16 +219,13 @@ aria-hidden="true">
       </div>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>TRY</button>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
-        (click)="store.hide()">Close</button>
+        (click)="gadget.hide()">Close</button>
     </div>
   </div>
 </div>
 </div>
 
-<!-- News Modal -->
-<button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
-mdbWavesEffect>LAUNCH DEMO</button>
-
+<!-- JSF News Modal -->
 <div mdbModal #news="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
@@ -268,10 +265,7 @@ aria-hidden="true">
 </div>
 </div>
 
-<!-- Weather Modal -->
-<button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="weather.show()"
-mdbWavesEffect>LAUNCH DEMO</button>
-
+<!-- Weather Control Modal -->
 <div mdbModal #weather="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
@@ -311,10 +305,7 @@ aria-hidden="true">
 </div>
 </div>
 
-<!-- Dictionary Modal -->
-<button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="dictionary.show()"
-mdbWavesEffect>LAUNCH DEMO</button>
-
+<!-- Node-Dictionary Modal -->
 <div mdbModal #dictionary="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
@@ -355,9 +346,6 @@ aria-hidden="true">
 </div>
 
 <!-- Hospital Modal -->
-<button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="hospital.show()"
-mdbWavesEffect>LAUNCH DEMO</button>
-
 <div mdbModal #hospital="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
@@ -397,10 +385,7 @@ aria-hidden="true">
 </div>
 </div>
 
-<!-- Axion-All-Access Modal -->
-<button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="axion.show()"
-mdbWavesEffect>LAUNCH DEMO</button>
-
+<!-- Axion-All-Access V1.1 Modal -->
 <div mdbModal #axion="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
