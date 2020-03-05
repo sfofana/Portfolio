@@ -10,6 +10,7 @@ import { SkillComponent } from './skill-matrix/skill/skill.component';
 import { ProjectsComponent } from './project/projects/projects.component';
 import { FreeComponent } from './freelance/free/free.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './contacts/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     WorkComponent,
     SkillComponent,
     ProjectsComponent,
-    FreeComponent
+    FreeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
