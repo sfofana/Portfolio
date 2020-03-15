@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
 import { NavbarModule, ChartsModule, WavesModule, ButtonsModule, CardsModule, ModalModule, TooltipModule, PopoverModule } from 'angular-bootstrap-md'
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home-page/home/home.component';
-import { WorkComponent } from './work-experience/work/work.component';
-import { SkillComponent } from './skill-matrix/skill/skill.component';
-import { ProjectsComponent } from './project/projects/projects.component';
-import { FreeComponent } from './freelance/free/free.component';
+import { HomeComponent } from './components/home/home.component';
+import { WorkComponent } from './components/work/work.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { FreeComponent } from './components/free/free.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ContactComponent } from './contacts/contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { EmailService } from './services/email.service';
+import { FormsModule } from '@angular/forms';
+import { UnsubscribeService } from './services/unsubscribe.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,8 @@ import { ContactComponent } from './contacts/contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
+    FormsModule,
+    HttpClientModule,
     NavbarModule,
     WavesModule,
     ButtonsModule,
@@ -35,7 +41,10 @@ import { ContactComponent } from './contacts/contact/contact.component';
     TooltipModule,
     PopoverModule,
   ],
-  providers: [],
+  providers: [
+    EmailService,
+    UnsubscribeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
