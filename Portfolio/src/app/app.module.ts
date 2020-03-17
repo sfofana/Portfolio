@@ -14,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { EmailService } from './services/email.service';
 import { FormsModule } from '@angular/forms';
-import { UnsubscribeService } from './services/unsubscribe.service';
+import { SubjectService } from './services/subject.service';
+import { ValidationService } from './services/validation.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { UnsubscribeService } from './services/unsubscribe.service';
   ],
   providers: [
     EmailService,
-    UnsubscribeService
+    ValidationService,
+    SubjectService
   ],
   bootstrap: [AppComponent]
 })

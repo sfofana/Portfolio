@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Email } from 'src/app/models/email';
 import { EmailService } from 'src/app/services/email.service';
-import { UnsubscribeService } from 'src/app/services/unsubscribe.service';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, shareReplay, tap, debounce, debounceTime } from 'rxjs/operators';
+import { SubjectService } from 'src/app/services/subject.service';
+import { ValidationService } from 'src/app/services/validation.service';
 
 @Component({
   selector: 'app-contact',
@@ -19,8 +20,13 @@ export class ContactComponent implements OnInit, OnDestroy {
   private success: string;
   private invalid: string;
   private mail = new Email();
+  private validMail = new Email();
 
-  constructor(private mailer: EmailService, private memory: UnsubscribeService) { }
+  constructor(
+    private mailer: EmailService, 
+    private memory: SubjectService,
+    private validate: ValidationService
+    ) { }
 
   ngOnInit() {
   }
@@ -31,12 +37,17 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.mail.phone = this.phone;
     this.mail.subject = this.subject;
     this.mail.message = this.message;
+    this.validMail = this.validate.validRequest(this.mail);
   }
 
   submit(){
     this.setMail();
-    this.mailer.sendEmail(this.mail).pipe(takeUntil(this.memory.unsubscribe)).subscribe();
     this.reset();
+    if(this.validMail){
+      this.mailer.sendEmail(this.validMail)
+      .pipe(takeUntil(this.memory.unsubscribe))
+      .subscribe(()=>this.success="Message Sent");
+    } 
   }
 
   reset(){

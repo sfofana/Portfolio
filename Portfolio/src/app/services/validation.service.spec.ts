@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UnsubscribeService } from '../unsubscribe.service';
+import { ValidationService } from './validation.service';
 
-describe('UnsubscribeService', () => {
+describe('ValidationService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: UnsubscribeService = TestBed.get(UnsubscribeService);
+    const service: ValidationService = TestBed.get(ValidationService);
     expect(service).toBeTruthy();
   });
 });

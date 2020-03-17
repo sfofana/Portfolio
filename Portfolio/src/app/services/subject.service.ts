@@ -4,9 +4,9 @@ import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UnsubscribeService {
-
-  public unsubscribe = new Subject();
+export class SubjectService {
 
   constructor() { }
+
+  public unsubscribe = new Subject();
 }
