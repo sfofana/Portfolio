@@ -48,7 +48,10 @@
             <div class="text-center">
               <button type="submit" mdbBtn color="primary" class="waves-light" (click)="submit()">Submit</button>
             </div>
-           <div *ngIf="success">{{success}}</div>
+            <div class="spacer d-flex justify-content-center">
+              <p class="success" *ngIf="success">{{success}}</p>
+              <p class="invalid" *ngIf="invalid">{{invalid}}</p>
+            </div>
           </div>
         </div>
   
