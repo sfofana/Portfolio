@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, transition, keyframes, animate } from '@angular/animations';
+import * as keyframe from '../../animations/animation'
 
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.scss']
+  styleUrls: ['./skill.component.scss'],
+  animations: [
+    trigger('animator', [
+      transition('* => flipInY', animate(1000, keyframes(keyframe.flipInY)))
+    ])
+  ]
 })
 export class SkillComponent implements OnInit {
 
   public chartType: string = 'doughnut';
+  private animateFlip: string;
 
   //skillmatrix data sets
   public chartDatasets1: Array<any> = [
@@ -58,6 +66,7 @@ export class SkillComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.animateFlip = 'flipInY';
   }
 
   public chartOptions: any = {

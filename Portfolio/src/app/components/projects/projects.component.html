@@ -1,6 +1,6 @@
 <div class="row">
     <div class="column">
-<mdb-card> 
+<mdb-card [@animator]="animateFlip"> 
       <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
     <mdb-card-body>
       <mdb-card-title>
@@ -10,11 +10,13 @@
         Technologies used: Angular, Material Design Bootstrap, HTML, CSS, NodeJS, Express, MongoDB, AWS S3, Heroku.
       </mdb-card-text>
       <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
-      mdbWavesEffect>LAUNCH DEMO</button>
+      mdbWavesEffect
+      [@animator]="animationState" (@animator.done)="resetAnimation()" 
+      (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
 
-  <mdb-card>
+  <mdb-card [@animator]="animateFlip">
     <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
     <mdb-card-body>
       <mdb-card-title>
@@ -24,11 +26,13 @@
         Technologies used: Angular, Angular Material, HTML, CSS, AWS S3, NewsAPI.
       </mdb-card-text>
       <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
-      mdbWavesEffect>LAUNCH DEMO</button>
+      mdbWavesEffect
+      [@animator]="animationState" (@animator.done)="resetAnimation()" 
+      (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
 
-  <mdb-card> 
+  <mdb-card [@animator]="animateFlip"> 
     <mdb-card-img src="assets/images/jhealth.png" alt="Card image cap"></mdb-card-img>
   <mdb-card-body>
     <mdb-card-title>
@@ -38,7 +42,9 @@
       Technologies used: Angular, Material Design Bootstrap, HTML, CSS, Google Firebase, AWS S3.
     </mdb-card-text>
     <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="health.show()"
-    mdbWavesEffect>LAUNCH DEMO</button>
+    mdbWavesEffect
+    [@animator]="animationState" (@animator.done)="resetAnimation()" 
+    (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
   </mdb-card-body>
 </mdb-card>
 </div>
@@ -63,7 +69,7 @@
         </mdb-card-body>
       </mdb-card> -->
 
-      <mdb-card>
+      <mdb-card [@animator]="animateFlip">
         <mdb-card-img src="assets/images/dictionary.png" alt="Card image cap"></mdb-card-img>
         <mdb-card-body>
           <mdb-card-title>
@@ -73,7 +79,9 @@
             Technologies used: Angular, Material Design Bootstrap, HTML, CSS, AWS S3, Marriam-Webster Dictionary API.
           </mdb-card-text>
           <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="dictionary.show()"
-            mdbWavesEffect>LAUNCH DEMO</button>
+            mdbWavesEffect
+            [@animator]="animationState" (@animator.done)="resetAnimation()" 
+            (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
         </mdb-card-body>
       </mdb-card>
 
@@ -91,7 +99,7 @@
         </mdb-card-body>
       </mdb-card> -->
 
-      <mdb-card> 
+      <mdb-card [@animator]="animateFlip"> 
         <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
       <mdb-card-body>
         <mdb-card-title>
@@ -101,13 +109,15 @@
           Technologies used: Angular, Material Design Bootstrap, HTML, CSS, Google Firebase, AWS S3.
         </mdb-card-text>
         <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="poly.show()"
-        mdbWavesEffect>LAUNCH DEMO</button>
+        mdbWavesEffect
+        [@animator]="animationState" (@animator.done)="resetAnimation()" 
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
       </mdb-card-body>
     </mdb-card>
     </div>
 
     <div class="column">
-        <mdb-card>
+        <mdb-card [@animator]="animateFlip">
             <mdb-card-img src="assets/images/a3.png" alt="Card image cap"></mdb-card-img>
             <mdb-card-body>
           
@@ -117,26 +127,31 @@
               </mdb-card-title>
           
               <!--Text-->
-              <mdb-card-text class="text-light">Online Banking app with features such as signin, deposit, withdraw, transferfunds, etc. 
-                Technologies used: Angular, Material Design Bootstrap, HTML, CSS, Java, Spring Framework, Spring H2, AWS S3, AWS EC2.
+              <mdb-card-text class="text-light">Superhero App designed to maintain a fictional database of 
+                superheroes and villains. Technologies used: Angular, Bootstrap, HTML, CSS, Java, Spring Framework, 
+                Spring H2, Heroku.
               </mdb-card-text>
           
               <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="axion.show()"
-              mdbWavesEffect>LAUNCH DEMO</button>
+              mdbWavesEffect
+              [@animator]="animationState" (@animator.done)="resetAnimation()" 
+              (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
             </mdb-card-body>
           </mdb-card>
 
-          <mdb-card> 
+          <mdb-card [@animator]="animateFlip"> 
             <mdb-card-img src="assets/images/jagged.png" alt="Card image cap"></mdb-card-img>
           <mdb-card-body>
             <mdb-card-title>
               <h4>Jagged Edge V1.1</h4>
             </mdb-card-title>
-            <mdb-card-text class="text-light"> Some quick example text to build on the card title and make up the bulk of the card's
-              content.
+            <mdb-card-text class="text-light">First person knife throwing game. Enless runner style with 
+              levels, secrete items, and a leaderboard. Powered by Unity.
             </mdb-card-text>
             <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="jagged.show()"
-            mdbWavesEffect>LAUNCH DEMO</button>
+            mdbWavesEffect
+            [@animator]="animationState" (@animator.done)="resetAnimation()" 
+            (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
           </mdb-card-body>
         </mdb-card>
         </div>
@@ -174,7 +189,9 @@
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
-        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>
+        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+          [@animator]="animationState" (@animator.done)="resetAnimation()" 
+          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
           <a href="http://jsfofana-bank-v2-1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         </button>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
@@ -215,7 +232,9 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>
+      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+        [@animator]="animationState" (@animator.done)="resetAnimation()" 
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
         <a href="http://currentnewsappv1.1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
       </button>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
@@ -257,7 +276,9 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>TRY</button>
+      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+        [@animator]="animationState" (@animator.done)="resetAnimation()" 
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">TRY</button>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="weather.hide()">Close</button>
     </div>
@@ -296,7 +317,9 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>
+      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+        [@animator]="animationState" (@animator.done)="resetAnimation()" 
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
         <a href="http://node-fofanadictionary.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
       </button>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
@@ -354,13 +377,12 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mb-0 p-0">
       <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-        <iframe class="embed-responsive-item" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://youtube.com/embed/twTD0J4xmFo" allowfullscreen></iframe>
       </div>
     </div>
     <!--Footer-->
     <div class="modal-footer justify-content-center flex-column flex-md-row">
-      <span>Contact me to run an instance of the backend: 
-          sufyanfofana@yahoo.com</span>
+      <span>Share!</span>
       <div>
          <!--Linkedin-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
@@ -378,8 +400,10 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>
-        <a href="http://axionallaccesswebv1.1.s3-website.us-east-2.amazonaws.com/" target="_blank">TRY</a>
+      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+        [@animator]="animationState" (@animator.done)="resetAnimation()" 
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
+        <a href="https://axion-all-access-v1.herokuapp.com/" target="_blank">TRY</a>
       </button>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="axion.hide()">Close</button>
@@ -396,7 +420,7 @@ aria-hidden="true">
       <!--Body-->
       <div class="modal-body mb-0 p-0">
         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" src="https://youtube.com/embed/x78v4qRCRbE" allowfullscreen></iframe>
         </div>
       </div>
       <!--Footer-->
@@ -415,7 +439,7 @@ aria-hidden="true">
          </a>
          <!--Youtube-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://www.youtube.com/watch?v=spZ6H84fEsA&feature=youtu.be" target="_blank">
+           href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
@@ -457,7 +481,9 @@ aria-hidden="true">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
-        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>
+        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+          [@animator]="animationState" (@animator.done)="resetAnimation()" 
+          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
           <a href="http://jsfofana-health.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         </button>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
@@ -498,7 +524,9 @@ aria-hidden="true">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
-        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect>
+        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+          [@animator]="animationState" (@animator.done)="resetAnimation()" 
+          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
           <a href="http://poly-personal-advisor.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         </button>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"

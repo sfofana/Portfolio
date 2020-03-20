@@ -1,4 +1,4 @@
-<div class="container z-depth-1 my-5 px-0">
+<div class="container z-depth-1 my-5 px-0" [@animator]="animateZoom">
 
     <!--Section: Content-->
     <section class="p-5 my-md-5 text-center">
@@ -46,7 +46,10 @@
             </div>
   
             <div class="text-center">
-              <button type="submit" mdbBtn color="primary" class="waves-light" (click)="submit()">Submit</button>
+              <button type="submit" mdbBtn color="primary" class="waves-light" 
+              [@animator]="animationState" (@animator.done)="resetAnimation()" 
+              (click)="submit(); startAnimation('pulse')">
+              Submit</button>
             </div>
             <div class="spacer d-flex justify-content-center">
               <p class="success" *ngIf="success">{{success}}</p>
