@@ -25,27 +25,21 @@ export class AnimationService {
     }
   }
 
-  public chartAnimate(state: string) : string {
-    if(state == "start"){
-      return "tada";
+  public luanchBtnAnimate(state: string) : string {
+    if(state == "heartBeat"){
+      return "heartBeat";
+    }
+    if(state == "pulse"){
+      return "pulse";
     }
     if(state == "stop"){
       return "";
     }
   }
 
-  public cogAnimate(state: string) : string {
+  public cardAnimate(state: string) : string {
     if(state == "start"){
-      return "rotate";
-    }
-    if(state == "stop"){
-      return "";
-    }
-  }
-
-  public cloudAnimate(state: string) : string {
-    if(state == "start"){
-      return "popup";
+      return "flipInY";
     }
     if(state == "stop"){
       return "";

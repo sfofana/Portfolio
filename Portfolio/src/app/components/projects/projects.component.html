@@ -1,6 +1,7 @@
 <div class="row">
     <div class="column">
-<mdb-card [@animator]="animateFlip"> 
+<mdb-card 
+  [@animator]="bankCard" (mouseover)="bankCardAnimate('start')"> 
       <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
     <mdb-card-body>
       <mdb-card-title>
@@ -11,12 +12,13 @@
       </mdb-card-text>
       <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
       mdbWavesEffect
-      [@animator]="animationState" (@animator.done)="resetAnimation()" 
-      (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
+      [@animator]="bankLnch" (@animator.done)="bankLnchAnimate('stop')" 
+      (click)="bankLnchAnimate('pulse')" (mouseover)="bankLnchAnimate('heartBeat')">LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
 
-  <mdb-card [@animator]="animateFlip">
+  <mdb-card  
+  [@animator]="newsCard" (mouseover)="newsCardAnimate('start')">
     <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
     <mdb-card-body>
       <mdb-card-title>
@@ -27,12 +29,13 @@
       </mdb-card-text>
       <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
       mdbWavesEffect
-      [@animator]="animationState" (@animator.done)="resetAnimation()" 
-      (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
+      [@animator]="newsLnch" (@animator.done)="newsLnchAnimate('stop')" 
+      (click)="newsLnchAnimate('pulse')" (mouseover)="newsLnchAnimate('heartBeat')">LAUNCH DEMO</button>
     </mdb-card-body>
   </mdb-card>
 
-  <mdb-card [@animator]="animateFlip"> 
+  <mdb-card  
+  [@animator]="healthCard" (mouseover)="healthCardAnimate('start')"> 
     <mdb-card-img src="assets/images/jhealth.png" alt="Card image cap"></mdb-card-img>
   <mdb-card-body>
     <mdb-card-title>
@@ -43,8 +46,8 @@
     </mdb-card-text>
     <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="health.show()"
     mdbWavesEffect
-    [@animator]="animationState" (@animator.done)="resetAnimation()" 
-    (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
+    [@animator]="healthLnch" (@animator.done)="healthLnchAnimate('stop')" 
+      (click)="healthLnchAnimate('pulse')" (mouseover)="healthLnchAnimate('heartBeat')">LAUNCH DEMO</button>
   </mdb-card-body>
 </mdb-card>
 </div>
@@ -117,7 +120,8 @@
     </div>
 
     <div class="column">
-        <mdb-card [@animator]="animateFlip">
+        <mdb-card  
+        [@animator]="axionCard" (mouseover)="axionCardAnimate('start')">
             <mdb-card-img src="assets/images/a3.png" alt="Card image cap"></mdb-card-img>
             <mdb-card-body>
           
@@ -134,12 +138,13 @@
           
               <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="axion.show()"
               mdbWavesEffect
-              [@animator]="animationState" (@animator.done)="resetAnimation()" 
-              (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
+              [@animator]="axionLnch" (@animator.done)="axionLnchAnimate('stop')" 
+              (click)="axionLnchAnimate('pulse')" (mouseover)="axionLnchAnimate('heartBeat')">LAUNCH DEMO</button>
             </mdb-card-body>
           </mdb-card>
 
-          <mdb-card [@animator]="animateFlip"> 
+          <mdb-card  
+          [@animator]="jaggedCard" (mouseover)="jaggedCardAnimate('start')"> 
             <mdb-card-img src="assets/images/jagged.png" alt="Card image cap"></mdb-card-img>
           <mdb-card-body>
             <mdb-card-title>
@@ -150,8 +155,8 @@
             </mdb-card-text>
             <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="jagged.show()"
             mdbWavesEffect
-            [@animator]="animationState" (@animator.done)="resetAnimation()" 
-            (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
+            [@animator]="jaggedLnch" (@animator.done)="jaggedLnchAnimate('stop')" 
+              (click)="jaggedLnchAnimate('pulse')" (mouseover)="jaggedLnchAnimate('heartBeat')">LAUNCH DEMO</button>
           </mdb-card-body>
         </mdb-card>
         </div>
