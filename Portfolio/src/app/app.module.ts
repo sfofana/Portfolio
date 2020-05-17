@@ -17,6 +17,7 @@ import { EmailService } from './services/email.service';
 import { FormsModule } from '@angular/forms';
 import { SubjectService } from './services/subject.service';
 import { ValidationService } from './services/validation.service';
+import { AnimationService } from './services/animation.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ValidationService } from './services/validation.service';
   providers: [
     EmailService,
     ValidationService,
-    SubjectService
+    SubjectService,
+    AnimationService
   ],
   bootstrap: [AppComponent]
 })

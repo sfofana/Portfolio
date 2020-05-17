@@ -8,21 +8,21 @@ import * as keyframe from '../../animations/animation'
   styleUrls: ['./work.component.scss'],
   animations: [
     trigger('animator', [
-      transition('* => fadeInRight', animate(500, keyframes(keyframe.fadeInRight))),
-      transition('* => fadeInRight2', animate(600, keyframes(keyframe.fadeInRight)))
+      transition('* => leadRight', animate(500, keyframes(keyframe.fadeInRight))),
+      transition('* => followRight', animate(600, keyframes(keyframe.fadeInRight)))
     ])
   ]
 })
 export class WorkComponent implements OnInit {
 
-  private animationState: string;
-  private animationState2: string;
+  private leadRight: string;
+  private followRight: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.animationState='fadeInRight';
-    this.animationState2='fadeInRight2';
+    this.leadRight='leadRight';
+    this.followRight='followRight';
   }
 
 }

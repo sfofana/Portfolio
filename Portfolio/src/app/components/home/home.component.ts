@@ -8,27 +8,18 @@ import * as keyframe from '../../animations/animation'
   styleUrls: ['./home.component.scss'],
   animations: [
     trigger('animator', [
-      transition('* => slideInUp', animate(500, keyframes(keyframe.slideInUp)))
+      transition('* => slideDown', animate(500, keyframes(keyframe.slideInDown)))
     ])
   ]
 })
 export class HomeComponent implements OnInit {
 
-  private animationState: string;
+  private slideDown: string;
   
   constructor() { }
 
   ngOnInit() {
-    this.animationState='slideInUp';
+    this.slideDown='slideDown';
   }
 
-  startAnimation(state: string){
-    if(!this.animationState){
-      this.animationState = state;
-    }
-  }
-
-  resetAnimation(){
-    this.animationState = "";
-  }
 }

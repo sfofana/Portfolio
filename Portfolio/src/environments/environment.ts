@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  emailUrl: 'your-hosted-nodemailer'
+  emailUrl: 'https://node-jsfofana-bank-v2.herokuapp.com/api/v1/email/send'
 };
 
 /*

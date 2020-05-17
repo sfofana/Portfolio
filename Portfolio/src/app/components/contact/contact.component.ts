@@ -6,6 +6,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { ValidationService } from 'src/app/services/validation.service';
 import { trigger, transition, keyframes, animate } from '@angular/animations';
 import * as keyframe from '../../animations/animation'
+import { AnimationService } from '../../services/animation.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,15 +14,15 @@ import * as keyframe from '../../animations/animation'
   styleUrls: ['./contact.component.scss'],
   animations: [
     trigger('animator', [
-      transition('* => zoomIn', animate(500, keyframes(keyframe.zoomIn))),
+      transition('* => slideUp', animate(500, keyframes(keyframe.slideInUp))),
       transition('* => pulse', animate(500, keyframes(keyframe.pulse)))
     ])
   ]
 })
 export class ContactComponent implements OnInit, OnDestroy {
 
-  private animationState: string;
-  private animateZoom: string;
+  private button: string;
+  private slideUp: string;
   private name: string;
   private email: string;
   private phone: string;
@@ -35,11 +36,12 @@ export class ContactComponent implements OnInit, OnDestroy {
     constructor(
         private mailer: EmailService,
         private memory: SubjectService,
-        private validate: ValidationService
+        private validate: ValidationService,
+        private animation: AnimationService
     ) { }
 
   ngOnInit() {
-    this.animateZoom='zoomIn';
+    this.slideUp='slideUp';
   }
 
   setMail(){
@@ -71,14 +73,8 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.invalid="";
   }
 
-  startAnimation(state: string){
-    if(!this.animationState){
-      this.animationState = state;
-    }
-  }
-
-  resetAnimation(){
-    this.animationState = "";
+  btnAnimate(state: string){
+    this.button = this.animation.btnAnimate(state);
   }
 
   ngOnDestroy(): void {

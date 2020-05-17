@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, keyframes, animate } from '@angular/animations';
 import * as keyframe from './animations/animation'
+import { AnimationService } from './services/animation.service';
 
 @Component({
   selector: 'app-root',
@@ -8,27 +9,65 @@ import * as keyframe from './animations/animation'
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('animator', [
-      transition('* => fadeInRight', animate(1100, keyframes(keyframe.fadeInRight))),
-      transition('* => fadeInLeft', animate(1100, keyframes(keyframe.fadeInLeft))),
-      transition('* => fadeInRight2', animate(1200, keyframes(keyframe.fadeInRight))),
-      transition('* => fadeInLeft2', animate(1200, keyframes(keyframe.fadeInLeft))),
-      transition('* => zoomIn', animate(1000, keyframes(keyframe.zoomIn)))
+      transition('* => leadRight', animate(1100, keyframes(keyframe.fadeInRight))),
+      transition('* => leadLeft', animate(1100, keyframes(keyframe.fadeInLeft))),
+      transition('* => followRight', animate(1200, keyframes(keyframe.fadeInRight))),
+      transition('* => followLeft', animate(1200, keyframes(keyframe.fadeInLeft))),
+      transition('* => zoomIn', animate(1000, keyframes(keyframe.zoomIn))),
+      transition('* => pulse', animate(500, keyframes(keyframe.pulse)))
     ])
   ]
 })
 export class AppComponent implements OnInit {
   
-  private animateLeft: string;
-  private animateRight: string;
-  private animateLeft2: string;
-  private animateRight2: string;
-  private animateZoom: string;
+  // Dashboard
+  private home: string;
+  private work: string;
+  private free: string;
+  private project: string;
+  private skill: string;
+  private contact: string;
+
+  // Main
+  private leadLeft: string;
+  private leadRight: string;
+  private followLeft: string;
+  private followRight: string;
+  private zoomIn: string;
+
+  constructor(private animation: AnimationService) {
+    
+  }
 
   ngOnInit(): void {
-      this.animateRight = 'fadeInRight';
-      this.animateLeft = 'fadeInLeft';
-      this.animateRight2 = 'fadeInRight2';
-      this.animateLeft2 = 'fadeInLeft2';
-      this.animateZoom = 'zoomIn';
+      this.leadRight = 'leadRight';
+      this.leadLeft = 'leadLeft';
+      this.followRight = 'followRight';
+      this.followLeft = 'followLeft';
+      this.zoomIn = 'zoomIn';
+    }
+
+    homeAnimate(state: string){
+      this.home = this.animation.dashAnimate(state);
+    }
+
+    workAnimate(state: string){
+      this.work = this.animation.dashAnimate(state);
+    }
+
+    freeAnimate(state: string){
+      this.free = this.animation.dashAnimate(state);
+    }
+
+    projectAnimate(state: string){
+      this.project = this.animation.dashAnimate(state);
+    }
+
+    skillAnimate(state: string){
+      this.skill = this.animation.dashAnimate(state);
+    }
+
+    contactAnimate(state: string){
+      this.contact = this.animation.dashAnimate(state);
     }
 }
