@@ -32,6 +32,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   private invalid: string;
   private mail = new Email();
   private validMail = new Email();
+  private isSpinning: boolean;
 
     constructor(
         private mailer: EmailService,
@@ -57,9 +58,11 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.setMail();
     this.reset();
     if(this.validMail){
+      this.isSpinning = true;
       this.mailer.sendEmail(this.validMail)
       .pipe(takeUntil(this.memory.unsubscribe))
       .subscribe(()=>this.success="Message Sent");
+      this.isSpinning = false;
     } 
   }
 

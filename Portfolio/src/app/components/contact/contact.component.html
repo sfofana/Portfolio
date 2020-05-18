@@ -51,6 +51,9 @@
               (click)="submit(); btnAnimate('start')">
               Submit</button>
             </div>
+
+            <div *ngIf="isSpinning" class="spinner-border my-3 text-light" role="status"></div>
+
             <div class="spacer d-flex justify-content-center">
               <p class="success" *ngIf="success">{{success}}</p>
               <p class="invalid" *ngIf="invalid">{{invalid}}</p>
