@@ -1,128 +1,17 @@
 <div class="row">
-    <div class="column1">
-    <mdb-card [@animator]="animateFlip">
-    <mdb-card-body>
-      <mdb-card-title>
-        <h4>Web Technologies</h4>
-      </mdb-card-title>
-      <canvas mdbChart
-      [chartType]="chartType"
-      [datasets]="chartDatasets1"
-      [labels]="chartLabels1"
-      [colors]="chartColors"
-      [options]="chartOptions"
-      [legend]="true"
-      (chartHover)="chartHovered($event)"
-      (chartClick)="chartClicked($event)">
-    </canvas>
-    </mdb-card-body>
-  </mdb-card>
-
-  <mdb-card [@animator]="animateFlip">
-    <mdb-card-body>
-      <mdb-card-title>
-        <h4>Core Framework</h4>
-      </mdb-card-title>
-      <canvas mdbChart
-      [chartType]="chartType"
-      [datasets]="chartDatasets2"
-      [labels]="chartLabels2"
-      [colors]="chartColors"
-      [options]="chartOptions"
-      [legend]="true"
-      (chartHover)="chartHovered($event)"
-      (chartClick)="chartClicked($event)">
-    </canvas>
-    </mdb-card-body>
-  </mdb-card>
-  
-  <mdb-card [@animator]="animateFlip">
-    <!--Card image-->
-    <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img> -->
-    <!--Card content-->
-    <mdb-card-body>
-  
-      <!--Title-->
-      <mdb-card-title>
-        <h4>Server-Side</h4>
-      </mdb-card-title>
-  
-      <!--Text-->
-      <mdb-card-text class="text-light"> Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-      </mdb-card-text>
-  
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-    </mdb-card-body>
-  </mdb-card>
-</div>
-<div class="column2">
-    <mdb-card [@animator]="animateFlip">
-        <mdb-card-body>
-          <mdb-card-title>
-            <h4>Testing Tools</h4>
-          </mdb-card-title>
-          <canvas mdbChart 
-          [chartType]="chartType"
-          [datasets]="chartDatasets4"
-          [labels]="chartLabels4"
-          [colors]="chartColors"
-          [options]="chartOptions"
-          [legend]="true"
-          (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)">
-        </canvas>
-        </mdb-card-body>
-      </mdb-card>
-
-    <mdb-card [@animator]="animateFlip">
-    <mdb-card-body>
-      <mdb-card-title>
-        <h4>Languages</h4>
-      </mdb-card-title>
-      <canvas mdbChart
-      [chartType]="chartType"
-      [datasets]="chartDatasets5"
-      [labels]="chartLabels5"
-      [colors]="chartColors"
-      [options]="chartOptions"
-      [legend]="true"
-      (chartHover)="chartHovered($event)"
-      (chartClick)="chartClicked($event)">
-    </canvas>
-    </mdb-card-body>
-  </mdb-card>
-  
-      <mdb-card [@animator]="animateFlip">
-        <!--Card image-->
-        <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img> -->
-        <!--Card content-->
-        <mdb-card-body>
-      
-          <!--Title-->
-          <mdb-card-title>
-            <h4>DevOps</h4>
-          </mdb-card-title>
-      
-          <!--Text-->
-          <mdb-card-text class="text-light"> Some quick example text to build on the card title and make up the bulk of the card's
-            content.
-          </mdb-card-text>
-      
-          <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-        </mdb-card-body>
-      </mdb-card>
-    </div>
-    <div class="column3">
-        <mdb-card [@animator]="animateFlip">
+  <table class="table-responsive">
+    <tbody>
+      <tr>
+        <th>
+          <mdb-card [@animator]="webCard" (mouseover)="webCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
-                <h4>Web & Micro Services</h4>
+                <h4>Web Technologies</h4>
               </mdb-card-title>
               <canvas mdbChart
               [chartType]="chartType"
-              [datasets]="chartDatasets2"
-              [labels]="chartLabels2"
+              [datasets]="webData"
+              [labels]="webLabel"
               [colors]="chartColors"
               [options]="chartOptions"
               [legend]="true"
@@ -131,6 +20,128 @@
             </canvas>
             </mdb-card-body>
           </mdb-card>
-
-        </div>
+        </th>
+        <th>
+          <mdb-card [@animator]="coreCard" (mouseover)="coreCardAnimate('start')">
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Core Framework</h4>
+              </mdb-card-title>
+              <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="coreData"
+              [labels]="coreLabel"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <mdb-card [@animator]="serverCard" (mouseover)="serverCardAnimate('start')">
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Server-Side</h4>
+              </mdb-card-title>
+              <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="serverData"
+              [labels]="serverLabel"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+        <th>
+          <mdb-card [@animator]="testCard" (mouseover)="testCardAnimate('start')">
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Testing Tools</h4>
+              </mdb-card-title>
+              <canvas mdbChart 
+              [chartType]="chartType"
+              [datasets]="testData"
+              [labels]="testLabel"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <mdb-card [@animator]="devCard" (mouseover)="devCardAnimate('start')">
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>DevOps</h4>
+              </mdb-card-title>
+              <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="devData"
+              [labels]="devLabel"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+        <th>
+          <mdb-card [@animator]="servicesCard" (mouseover)="servicesCardAnimate('start')">
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Web & Micro services</h4>
+              </mdb-card-title>
+              <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="servicesData"
+              [labels]="servicesLabel"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <mdb-card [@animator]="langCard" (mouseover)="langCardAnimate('start')">
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Languages</h4>
+              </mdb-card-title>
+              <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="langData"
+              [labels]="langLabel"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -1,165 +1,148 @@
 <div class="row">
-    <div class="column">
-<mdb-card 
-  [@animator]="bankCard" (mouseover)="bankCardAnimate('start')"> 
-      <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
-    <mdb-card-body>
-      <mdb-card-title>
-        <h4>JS.Fofana Bank V2.1</h4>
-      </mdb-card-title>
-      <mdb-card-text class="text-light">Online Banking app with features such as signin, deposit, withdraw, transferfunds, etc. 
-        Technologies used: Angular, Material Design Bootstrap, HTML, CSS, NodeJS, Express, MongoDB, AWS S3, Heroku.
-      </mdb-card-text>
-      <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
-      mdbWavesEffect
-      [@animator]="bankLnch" (@animator.done)="bankLnchAnimate('stop')" 
-      (click)="bankLnchAnimate('pulse')" (mouseover)="bankLnchAnimate('heartBeat')">LAUNCH DEMO</button>
-    </mdb-card-body>
-  </mdb-card>
-
-  <mdb-card  
-  [@animator]="newsCard" (mouseover)="newsCardAnimate('start')">
-    <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
-    <mdb-card-body>
-      <mdb-card-title>
-        <h4>JSF News</h4>
-      </mdb-card-title>
-      <mdb-card-text class="text-light">News app which allows user to toggle through current news as well as filter specific news channels. 
-        Technologies used: Angular, Angular Material, HTML, CSS, AWS S3, NewsAPI.
-      </mdb-card-text>
-      <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
-      mdbWavesEffect
-      [@animator]="newsLnch" (@animator.done)="newsLnchAnimate('stop')" 
-      (click)="newsLnchAnimate('pulse')" (mouseover)="newsLnchAnimate('heartBeat')">LAUNCH DEMO</button>
-    </mdb-card-body>
-  </mdb-card>
-
-  <mdb-card  
-  [@animator]="healthCard" (mouseover)="healthCardAnimate('start')"> 
-    <mdb-card-img src="assets/images/jhealth.png" alt="Card image cap"></mdb-card-img>
-  <mdb-card-body>
-    <mdb-card-title>
-      <h4>JS.Fofana Health</h4>
-    </mdb-card-title>
-    <mdb-card-text class="text-light">Insurace record browser with features such as sign in and searching for an individuals record current status. 
-      Technologies used: Angular, Material Design Bootstrap, HTML, CSS, Google Firebase, AWS S3.
-    </mdb-card-text>
-    <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="health.show()"
-    mdbWavesEffect
-    [@animator]="healthLnch" (@animator.done)="healthLnchAnimate('stop')" 
-      (click)="healthLnchAnimate('pulse')" (mouseover)="healthLnchAnimate('heartBeat')">LAUNCH DEMO</button>
-  </mdb-card-body>
-</mdb-card>
-</div>
-
-<div class="column">
-    <!-- <mdb-card>
-    
-        <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
-        
-        <mdb-card-body>
-
-          <mdb-card-title>
-            <h4>Weather Control</h4>
-          </mdb-card-title>
-
-          <mdb-card-text class="text-light">Weather app which allows user to search for desired location to diplay current weather conditions. 
-            Technologies used: Angular, Material Design Bootstrap, HTML, CSS, NodeJS, Express, AWS S3, Google API, DarkSky API, Heroku. 
-          </mdb-card-text>
-      
-          <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="weather.show()"
-            mdbWavesEffect>LAUNCH DEMO</button>
-        </mdb-card-body>
-      </mdb-card> -->
-
-      <mdb-card [@animator]="animateFlip">
-        <mdb-card-img src="assets/images/dictionary.png" alt="Card image cap"></mdb-card-img>
-        <mdb-card-body>
-          <mdb-card-title>
-            <h4>Node-Fofana Dictionary</h4>
-          </mdb-card-title>
-          <mdb-card-text class="text-light">Dictionary app which allows user to search for word and display definition while caching results. 
-            Technologies used: Angular, Material Design Bootstrap, HTML, CSS, AWS S3, Marriam-Webster Dictionary API.
-          </mdb-card-text>
-          <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="dictionary.show()"
-            mdbWavesEffect
-            [@animator]="animationState" (@animator.done)="resetAnimation()" 
-            (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
-        </mdb-card-body>
-      </mdb-card>
-
-      <!-- <mdb-card>
-        <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
-        <mdb-card-body>
-          <mdb-card-title>
-            <h4>Hospital App</h4>
-          </mdb-card-title>
-          <mdb-card-text class="text-light"> Some quick example text to build on the card title and make up the bulk of the card's
-            content.
-          </mdb-card-text>      
-          <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="hospital.show()"
-                mdbWavesEffect>LAUNCH DEMO</button>
-        </mdb-card-body>
-      </mdb-card> -->
-
-      <mdb-card [@animator]="animateFlip"> 
-        <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
-      <mdb-card-body>
-        <mdb-card-title>
-          <h4>Poly-Personal Advisor</h4>
-        </mdb-card-title>
-        <mdb-card-text class="text-light">Personal Advisor app allows user to log reoccuring events and displays them graphically. 
-          Technologies used: Angular, Material Design Bootstrap, HTML, CSS, Google Firebase, AWS S3.
-        </mdb-card-text>
-        <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="poly.show()"
-        mdbWavesEffect
-        [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">LAUNCH DEMO</button>
-      </mdb-card-body>
-    </mdb-card>
-    </div>
-
-    <div class="column">
-        <mdb-card  
-        [@animator]="axionCard" (mouseover)="axionCardAnimate('start')">
-            <mdb-card-img src="assets/images/a3.png" alt="Card image cap"></mdb-card-img>
-            <mdb-card-body>
-          
-              <!--Title-->
-              <mdb-card-title>
-                <h4>Axion-All-Access V1.1</h4>
-              </mdb-card-title>
-          
-              <!--Text-->
-              <mdb-card-text class="text-light">Superhero App designed to maintain a fictional database of 
-                superheroes and villains. Technologies used: Angular, Bootstrap, HTML, CSS, Java, Spring Framework, 
-                Spring H2, Heroku.
-              </mdb-card-text>
-          
-              <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="axion.show()"
-              mdbWavesEffect
-              [@animator]="axionLnch" (@animator.done)="axionLnchAnimate('stop')" 
-              (click)="axionLnchAnimate('pulse')" (mouseover)="axionLnchAnimate('heartBeat')">LAUNCH DEMO</button>
-            </mdb-card-body>
-          </mdb-card>
-
-          <mdb-card  
-          [@animator]="jaggedCard" (mouseover)="jaggedCardAnimate('start')"> 
-            <mdb-card-img src="assets/images/jagged.png" alt="Card image cap"></mdb-card-img>
+  <table class="table-responsive">
+    <tbody>
+      <tr>
+        <th>
+          <mdb-card 
+          [@animator]="freddieCard" (mouseover)="freddieCardAnimate('start')"> 
+            <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
           <mdb-card-body>
             <mdb-card-title>
-              <h4>Jagged Edge V1.1</h4>
+              <h4>Freddie Mac Enhancements</h4>
             </mdb-card-title>
-            <mdb-card-text class="text-light">First person knife throwing game. Enless runner style with 
-              levels, secrete items, and a leaderboard. Powered by Unity.
+            <mdb-card-text class="text-light">Online Banking app with features such as signin, deposit, withdraw, transferfunds, etc. 
+              Technologies used: Angular, Material Design Bootstrap, HTML, CSS, NodeJS, Express, MongoDB, AWS S3, Heroku.
             </mdb-card-text>
-            <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="jagged.show()"
+            <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
             mdbWavesEffect
-            [@animator]="jaggedLnch" (@animator.done)="jaggedLnchAnimate('stop')" 
-              (click)="jaggedLnchAnimate('pulse')" (mouseover)="jaggedLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+            [@animator]="freddieLnch" (@animator.done)="freddieLnchAnimate('stop')" 
+            (click)="freddieLnchAnimate('pulse')" (mouseover)="freddieLnchAnimate('heartBeat')">LAUNCH DEMO</button>
           </mdb-card-body>
         </mdb-card>
-        </div>
+        </th>
+        <th>
+          <mdb-card  
+            [@animator]="rekCard" (mouseover)="rekCardAnimate('start')">
+              <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
+              <mdb-card-body>
+                <mdb-card-title>
+                  <h4>Aws Rekognition App</h4>
+                </mdb-card-title>
+                <mdb-card-text class="text-light">News app which allows user to toggle through current news as well as filter specific news channels. 
+                  Technologies used: Angular, Angular Material, HTML, CSS, AWS S3, NewsAPI.
+                </mdb-card-text>
+                <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
+                mdbWavesEffect
+                [@animator]="rekLnch" (@animator.done)="rekLnchAnimate('stop')" 
+                (click)="rekLnchAnimate('pulse')" (mouseover)="rekLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+              </mdb-card-body>
+            </mdb-card>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <mdb-card 
+          [@animator]="bankCard" (mouseover)="bankCardAnimate('start')"> 
+            <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
+          <mdb-card-body>
+            <mdb-card-title>
+              <h4>JS.Fofana Bank V2.1</h4>
+            </mdb-card-title>
+            <mdb-card-text class="text-light">Online Banking app with features such as signin, deposit, withdraw, transferfunds, etc. 
+              Technologies used: Angular, Material Design Bootstrap, HTML, CSS, NodeJS, Express, MongoDB, AWS S3, Heroku.
+            </mdb-card-text>
+            <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
+            mdbWavesEffect
+            [@animator]="bankLnch" (@animator.done)="bankLnchAnimate('stop')" 
+            (click)="bankLnchAnimate('pulse')" (mouseover)="bankLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+          </mdb-card-body>
+        </mdb-card>
+        </th>
+        <th>
+          <mdb-card  
+            [@animator]="newsCard" (mouseover)="newsCardAnimate('start')">
+              <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
+              <mdb-card-body>
+                <mdb-card-title>
+                  <h4>JSF News</h4>
+                </mdb-card-title>
+                <mdb-card-text class="text-light">News app which allows user to toggle through current news as well as filter specific news channels. 
+                  Technologies used: Angular, Angular Material, HTML, CSS, AWS S3, NewsAPI.
+                </mdb-card-text>
+                <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
+                mdbWavesEffect
+                [@animator]="newsLnch" (@animator.done)="newsLnchAnimate('stop')" 
+                (click)="newsLnchAnimate('pulse')" (mouseover)="newsLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+              </mdb-card-body>
+            </mdb-card>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <mdb-card  
+            [@animator]="healthCard" (mouseover)="healthCardAnimate('start')"> 
+              <mdb-card-img src="assets/images/jhealth.png" alt="Card image cap"></mdb-card-img>
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>JS.Fofana Health</h4>
+              </mdb-card-title>
+              <mdb-card-text class="text-light">Insurace record browser with features such as sign in and searching for an individuals record current status. 
+                Technologies used: Angular, Material Design Bootstrap, HTML, CSS, Google Firebase, AWS S3.
+              </mdb-card-text>
+              <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="health.show()"
+              mdbWavesEffect
+              [@animator]="healthLnch" (@animator.done)="healthLnchAnimate('stop')" 
+                (click)="healthLnchAnimate('pulse')" (mouseover)="healthLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+        <th>
+          <mdb-card  
+          [@animator]="axionCard" (mouseover)="axionCardAnimate('start')">
+              <mdb-card-img src="assets/images/a3.png" alt="Card image cap"></mdb-card-img>
+              <mdb-card-body>
+            
+                <!--Title-->
+                <mdb-card-title>
+                  <h4>Axion-All-Access V1.1</h4>
+                </mdb-card-title>
+            
+                <!--Text-->
+                <mdb-card-text class="text-light">Superhero App designed to maintain a fictional database of 
+                  superheroes and villains. Technologies used: Angular, Bootstrap, HTML, CSS, Java, Spring Framework, 
+                  Spring H2, Heroku.
+                </mdb-card-text>
+            
+                <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="axion.show()"
+                mdbWavesEffect
+                [@animator]="axionLnch" (@animator.done)="axionLnchAnimate('stop')" 
+                (click)="axionLnchAnimate('pulse')" (mouseover)="axionLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+              </mdb-card-body>
+            </mdb-card>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <mdb-card  
+            [@animator]="jaggedCard" (mouseover)="jaggedCardAnimate('start')"> 
+              <mdb-card-img src="assets/images/jagged.png" alt="Card image cap"></mdb-card-img>
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>Jagged Edge V1.1</h4>
+              </mdb-card-title>
+              <mdb-card-text class="text-light">First person knife throwing game. Enless runner style with 
+                levels, secrete items, and a leaderboard. Powered by Unity.
+              </mdb-card-text>
+              <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="jagged.show()"
+              mdbWavesEffect
+              [@animator]="jaggedLnch" (@animator.done)="jaggedLnchAnimate('stop')" 
+                (click)="jaggedLnchAnimate('pulse')" (mouseover)="jaggedLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+            </mdb-card-body>
+          </mdb-card>
+        </th>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 

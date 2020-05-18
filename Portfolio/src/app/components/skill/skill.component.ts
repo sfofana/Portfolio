@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, keyframes, animate } from '@angular/animations';
 import * as keyframe from '../../animations/animation'
+import { AnimationService } from '../../services/animation.service';
+import { ChartService } from '../../services/chart.service';
 
 @Component({
   selector: 'app-skill',
@@ -8,65 +10,73 @@ import * as keyframe from '../../animations/animation'
   styleUrls: ['./skill.component.scss'],
   animations: [
     trigger('animator', [
-      transition('* => flipInY', animate(1000, keyframes(keyframe.flipInY)))
+      transition('* => flipInY', animate(1000, keyframes(keyframe.flipInY))),
+      transition('* => inLeft', animate(300, keyframes(keyframe.fadeInLeft)))
     ])
   ]
 })
 export class SkillComponent implements OnInit {
 
-  public chartType: string = 'doughnut';
+  private chartType: string;
   private animateFlip: string;
 
   //skillmatrix data sets
-  public chartDatasets1: Array<any> = [
-    { data: [120, 120, 120, 120, 120], label: 'Web Technologies' }
-  ];
-
-  public chartDatasets2: Array<any> = [
-    { data: [180, 180, 180, 120, 90], label: 'Core Framework' }
-  ];
-
-  public chartDatasets3: Array<any> = [
-    { data: [120, 120, 120, 120, 120], label: 'Server-Side' }
-  ];
-
-  public chartDatasets4: Array<any> = [
-    { data: [120, 120, 90, 90, 120], label: 'Testing Tools' }
-  ];
-
-  public chartDatasets5: Array<any> = [
-    { data: [540, 120, 120, 120, 120], label: 'Languages' }
-  ];
-
-  public chartDatasets6: Array<any> = [
-    { data: [90, 90, 90, 180, 90], label: 'DevOps' }
-  ];
-
-  public chartDatasets7: Array<any> = [
-    { data: [90, 90, 90, 90, 90], label: 'Web & Micro Services' }
-  ];
+  private webData: Array<any>;
+  private coreData: Array<any>;
+  private serverData: Array<any>;
+  private testData: Array<any>;
+  private langData: Array<any>;
+  private devData: Array<any>;
+  private servicesData: Array<any>;
 
   //labels
-  public chartLabels1: Array<any> = ['Angular', 'HTML', 'CSS', 'JavaScript', 'AJAX'];
-  public chartLabels2: Array<any> = ['Spring MVC', 'Spring ORM', 'Spring Cloud', 'Servlet', 'Hibernate'];
-  public chartLabels3: Array<any> = ['Apache Tomcat', 'NodeJS', 'JDBC', 'Oracle SQL', 'JSON'];
-  public chartLabels4: Array<any> = ['JUnit', 'Postman', 'Jasmine', 'Karma', 'Mockito'];
-  public chartLabels5: Array<any> = ['Java', 'HTML', 'JavaScript', 'TypeScript', 'XML'];
-  public chartLabels6: Array<any> = ['Jenkins', 'AWS EC2', 'AWS S3', 'Maven', 'Docker'];
-  public chartLabels7: Array<any> = ['Netflix Eureka', 'Netflix Hystrix', 'Netflix Zuul', 'REST', 'SOAP'];
+  private webLabel: Array<any>;
+  private coreLabel: Array<any>;
+  private serverLabel: Array<any>;
+  private testLabel: Array<any>;
+  private langLabel: Array<any>;
+  private devLabel: Array<any>;
+  private servicesLabel: Array<any>;
 
-  public chartColors: Array<any> = [
-    {
-      backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-      hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
-      borderWidth: 2,
-    }
-  ];
+  private chartColors: Array<any>;
 
-  constructor() { }
+  // Animations
+  private webCard: string;
+  private coreCard: string;
+  private serverCard: string;
+  private testCard: string;
+  private langCard: string;
+  private devCard: string;
+  private servicesCard: string;
+
+  constructor(private animation: AnimationService, private data: ChartService) { }
 
   ngOnInit() {
     this.animateFlip = 'flipInY';
+    this.chartType = this.data.chartType;
+    this.webData = this.data.webData;
+    this.coreData = this.data.coreData;
+    this.serverData = this.data.serverData;
+    this.testData = this.data.testData;
+    this.langData = this.data.langData;
+    this.devData = this.data.devData;
+    this.servicesData = this.data.servicesData;
+    this.webLabel = this.data.webLabel;
+    this.coreLabel = this.data.coreLabel;
+    this.serverLabel = this.data.serverLabel;
+    this.testLabel = this.data.testLabel;
+    this.langLabel = this.data.langLabel;
+    this.devLabel = this.data.devLabel
+    this.servicesLabel = this.data.servicesLabel;
+    this.chartColors = this.data.chartColors;
+
+    this.webCard = "inLeft";
+    this.coreCard = "inLeft";
+    this.serverCard = "inLeft";
+    this.testCard = "inLeft";
+    this.langCard = "inLeft";
+    this.devCard = "inLeft";
+    this.servicesCard = "inLeft";
   }
 
   public chartOptions: any = {
@@ -74,4 +84,32 @@ export class SkillComponent implements OnInit {
   };
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }
+
+  webCardAnimate(state: string){
+    this.webCard = this.animation.cardAnimate(state);
+  }
+
+  coreCardAnimate(state: string){
+    this.coreCard = this.animation.cardAnimate(state);
+  }
+
+  serverCardAnimate(state: string){
+    this.serverCard = this.animation.cardAnimate(state);
+  }
+
+  testCardAnimate(state: string){
+    this.testCard = this.animation.cardAnimate(state);
+  }
+
+  langCardAnimate(state: string){
+    this.langCard = this.animation.cardAnimate(state);
+  }
+
+  devCardAnimate(state: string){
+    this.devCard = this.animation.cardAnimate(state);
+  }
+
+  servicesCardAnimate(state: string){
+    this.servicesCard = this.animation.cardAnimate(state);
+  }
 }
