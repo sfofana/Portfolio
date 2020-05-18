@@ -5,31 +5,31 @@
         <th>
           <mdb-card 
           [@animator]="freddieCard" (mouseover)="freddieCardAnimate('start')"> 
-            <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
+            <mdb-card-img src="assets/images/fredpage.png" alt="Card image cap"></mdb-card-img>
           <mdb-card-body>
             <mdb-card-title>
               <h4>Freddie Mac Enhancements</h4>
             </mdb-card-title>
-            <mdb-card-text class="text-light">Online Banking app with features such as signin, deposit, withdraw, transferfunds, etc. 
-              Technologies used: Angular, Material Design Bootstrap, HTML, CSS, NodeJS, Express, MongoDB, AWS S3, Heroku.
+            <mdb-card-text class="text-light">Role: Implemented consumption of microservices and persisting data with in-house apps. 
+              Technologies used: Angular, JSP, HTML, CSS, NodeJS, Java, Spring Boot, Jenkins.
             </mdb-card-text>
             <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
             mdbWavesEffect
             [@animator]="freddieLnch" (@animator.done)="freddieLnchAnimate('stop')" 
-            (click)="freddieLnchAnimate('pulse')" (mouseover)="freddieLnchAnimate('heartBeat')">LAUNCH DEMO</button>
+            (click)="freddieLnchAnimate('pulse')" (mouseover)="freddieLnchAnimate('heartBeat')">EXPLORE</button>
           </mdb-card-body>
         </mdb-card>
         </th>
         <th>
           <mdb-card  
             [@animator]="rekCard" (mouseover)="rekCardAnimate('start')">
-              <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
+              <mdb-card-img src="assets/images/rek.png" alt="Card image cap"></mdb-card-img>
               <mdb-card-body>
                 <mdb-card-title>
                   <h4>Aws Rekognition App</h4>
                 </mdb-card-title>
-                <mdb-card-text class="text-light">News app which allows user to toggle through current news as well as filter specific news channels. 
-                  Technologies used: Angular, Angular Material, HTML, CSS, AWS S3, NewsAPI.
+                <mdb-card-text class="text-light">Face rekognition app using AWS allows user to upload images and compare similarity between different faces. 
+                  Technologies used: Angular, Material Design Bootstrap, Java, C#, AWS EC2, AWS S3, Jenkins.
                 </mdb-card-text>
                 <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
                 mdbWavesEffect
