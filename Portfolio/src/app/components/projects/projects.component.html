@@ -31,7 +31,7 @@
                 <mdb-card-text class="text-light">Face rekognition app using AWS allows user to upload images and compare similarity between different faces. 
                   Technologies used: Angular, Material Design Bootstrap, Java, C#, AWS EC2, AWS S3, Jenkins.
                 </mdb-card-text>
-                <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="news.show()"
+                <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="rek.show()"
                 mdbWavesEffect
                 [@animator]="rekLnch" (@animator.done)="rekLnchAnimate('stop')" 
                 (click)="rekLnchAnimate('pulse')" (mouseover)="rekLnchAnimate('heartBeat')">LAUNCH DEMO</button>
@@ -177,11 +177,10 @@
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
-        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+        <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
           [@animator]="animationState" (@animator.done)="resetAnimation()" 
-          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
-          <a href="http://jsfofana-bank-v2-1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
-        </button>
+          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+          href="http://jsfofana-bank-v2-1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="bankv21.hide()">Close</button>
       </div>
@@ -220,11 +219,10 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+      <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
-        <a href="http://currentnewsappv1.1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
-      </button>
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+        href="http://currentnewsappv1.1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="news.hide()">Close</button>
     </div>
@@ -232,8 +230,8 @@ aria-hidden="true">
 </div>
 </div>
 
-<!-- Weather Control Modal -->
-<div mdbModal #weather="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!-- AWS Rekognition Modal -->
+<div mdbModal #rek="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
@@ -245,7 +243,7 @@ aria-hidden="true">
     </div>
     <!--Footer-->
     <div class="modal-footer justify-content-center flex-column flex-md-row">
-      <span>Contact me to run an instance of the backend: 
+      <span>Contact me to run backend: 
           sufyanfofana@yahoo.com</span>
       <div>
          <!--Linkedin-->
@@ -255,7 +253,7 @@ aria-hidden="true">
        </a>
        <!--GitHub-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://github.com/sfofana/JS.Fofana-Bank-V2.2" target="_blank">
+         href="https://github.com/sfofana/AwsImgRekJava" target="_blank">
          <mdb-icon fab icon="github"></mdb-icon>
        </a>
        <!--Youtube-->
@@ -264,11 +262,12 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+      <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">TRY</button>
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+        href="http://awsrekfrontendsfofana.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
-        (click)="weather.hide()">Close</button>
+        (click)="rek.hide()">Close</button>
     </div>
   </div>
 </div>
@@ -388,11 +387,10 @@ aria-hidden="true">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
-      <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+      <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
-        <a href="https://axion-all-access-v1.herokuapp.com/" target="_blank">TRY</a>
-      </button>
+        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+        href="https://axion-all-access-v1.herokuapp.com/" target="_blank">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="axion.hide()">Close</button>
     </div>
@@ -469,11 +467,10 @@ aria-hidden="true">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
-        <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
+        <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
           [@animator]="animationState" (@animator.done)="resetAnimation()" 
-          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
-          <a href="http://jsfofana-health.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
-        </button>
+          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+          href="http://jsfofana-health.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="health.hide()">Close</button>
       </div>
