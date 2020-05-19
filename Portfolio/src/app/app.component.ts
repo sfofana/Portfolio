@@ -14,7 +14,8 @@ import { AnimationService } from './services/animation.service';
       transition('* => followRight', animate(1200, keyframes(keyframe.fadeInRight))),
       transition('* => followLeft', animate(1200, keyframes(keyframe.fadeInLeft))),
       transition('* => zoomIn', animate(1000, keyframes(keyframe.zoomIn))),
-      transition('* => pulse', animate(500, keyframes(keyframe.pulse)))
+      transition('* => pulse', animate(500, keyframes(keyframe.pulse))),
+      transition('* => up', animate(300, keyframes(keyframe.moveUp)))
     ])
   ]
 })
@@ -34,6 +35,12 @@ export class AppComponent implements OnInit {
   private followLeft: string;
   private followRight: string;
   private zoomIn: string;
+
+  // Link
+  private linkedin: string;
+  private git: string;
+  private youtube: string;
+  private email: string;
 
   constructor(private animation: AnimationService) {
     
@@ -69,5 +76,21 @@ export class AppComponent implements OnInit {
 
     contactAnimate(state: string){
       this.contact = this.animation.dashAnimate(state);
+    }
+
+    linkedinAnimate(state: string){
+      this.linkedin = this.animation.linkAnimate(state);
+    }
+
+    gitAnimate(state: string){
+      this.git = this.animation.linkAnimate(state);
+    }
+
+    youtubeAnimate(state: string){
+      this.youtube = this.animation.linkAnimate(state);
+    }
+
+    emailAnimate(state: string){
+      this.email = this.animation.linkAnimate(state);
     }
 }

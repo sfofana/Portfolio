@@ -13,10 +13,10 @@
             <mdb-card-text class="text-light">Role: Implemented consumption of microservices and persisting data with in-house apps. 
               Technologies used: Angular, JSP, HTML, CSS, NodeJS, Java, Spring Boot, Jenkins.
             </mdb-card-text>
-            <button type="button" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="bankv21.show()"
-            mdbWavesEffect
+            <a type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect
             [@animator]="freddieLnch" (@animator.done)="freddieLnchAnimate('stop')" 
-            (click)="freddieLnchAnimate('pulse')" (mouseover)="freddieLnchAnimate('heartBeat')">EXPLORE</button>
+            (click)="freddieLnchAnimate('pulse')" (mouseover)="freddieLnchAnimate('heartBeat')"
+            href="http://www.freddiemac.com" target="_blank">EXPLORE</a>
           </mdb-card-body>
         </mdb-card>
         </th>
@@ -178,8 +178,8 @@
          </a>
         </div>
         <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
-          [@animator]="animationState" (@animator.done)="resetAnimation()" 
-          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+          [@animator]="try" (@animator.done)="tryAnimate('stop')" 
+          (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
           href="http://jsfofana-bank-v2-1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="bankv21.hide()">Close</button>
@@ -220,8 +220,8 @@ aria-hidden="true">
        </a>
       </div>
       <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
-        [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+        [@animator]="try" (@animator.done)="tryAnimate('stop')" 
+        (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
         href="http://currentnewsappv1.1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="news.hide()">Close</button>
@@ -263,8 +263,8 @@ aria-hidden="true">
        </a>
       </div>
       <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
-        [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+        [@animator]="try" (@animator.done)="tryAnimate('stop')" 
+        (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
         href="http://awsrekfrontendsfofana.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="rek.hide()">Close</button>
@@ -388,8 +388,8 @@ aria-hidden="true">
        </a>
       </div>
       <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
-        [@animator]="animationState" (@animator.done)="resetAnimation()" 
-        (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+        [@animator]="try" (@animator.done)="tryAnimate('stop')" 
+        (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
         href="https://axion-all-access-v1.herokuapp.com/" target="_blank">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="axion.hide()">Close</button>
@@ -468,8 +468,8 @@ aria-hidden="true">
          </a>
         </div>
         <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
-          [@animator]="animationState" (@animator.done)="resetAnimation()" 
-          (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')"
+          [@animator]="try" (@animator.done)="tryAnimate('stop')" 
+          (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
           href="http://jsfofana-health.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="health.hide()">Close</button>

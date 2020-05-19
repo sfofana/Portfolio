@@ -35,6 +35,7 @@ export class ProjectsComponent implements OnInit {
   private axionLnch: string;
   private jaggedLnch: string;
   private rekLnch: string;
+  private try: string;
 
   constructor(private animation: AnimationService) { }
 
@@ -46,6 +47,10 @@ export class ProjectsComponent implements OnInit {
     this.axionCard ="left";
     this.jaggedCard ="left";
     this.rekCard = "left";
+  }
+
+  tryAnimate(state: string){
+    this.try = this.animation.actionBtnAnimate(state);
   }
 
   bankCardAnimate(state: string){
@@ -77,31 +82,31 @@ export class ProjectsComponent implements OnInit {
   }
 
   bankLnchAnimate(state: string){
-    this.bankLnch = this.animation.luanchBtnAnimate(state);
+    this.bankLnch = this.animation.actionBtnAnimate(state);
   }
 
   newsLnchAnimate(state: string){
-    this.newsLnch = this.animation.luanchBtnAnimate(state);
+    this.newsLnch = this.animation.actionBtnAnimate(state);
   }
 
   healthLnchAnimate(state: string){
-    this.healthLnch = this.animation.luanchBtnAnimate(state);
+    this.healthLnch = this.animation.actionBtnAnimate(state);
   }
 
   freddieLnchAnimate(state: string){
-    this.freddieLnch = this.animation.luanchBtnAnimate(state);
+    this.freddieLnch = this.animation.actionBtnAnimate(state);
   }
 
   axionLnchAnimate(state: string){
-    this.axionLnch = this.animation.luanchBtnAnimate(state);
+    this.axionLnch = this.animation.actionBtnAnimate(state);
   }
 
   jaggedLnchAnimate(state: string){
-    this.jaggedLnch = this.animation.luanchBtnAnimate(state);
+    this.jaggedLnch = this.animation.actionBtnAnimate(state);
   }
 
   rekLnchAnimate(state: string){
-    this.rekLnch = this.animation.luanchBtnAnimate(state);
+    this.rekLnch = this.animation.actionBtnAnimate(state);
   }
 
 }

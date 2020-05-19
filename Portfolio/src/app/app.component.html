@@ -154,20 +154,28 @@
         <div class="col-md-12 py-5">
           <div class="mb-5 flex-center">
             <!--Linkedin -->
-            <a class="li-ic" href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+            <a class="li-ic" href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank"
+              [@animator]="linkedin" (@animator.done)="linkedinAnimate('stop')" 
+              (mouseover)="linkedinAnimate('start')">
               <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
             <!--GitHub-->
-            <a class="ins-ic" href="https://github.com/sfofana" target="_blank">
+            <a class="ins-ic" href="https://github.com/sfofana" target="_blank"
+              [@animator]="git" (@animator.done)="gitAnimate('stop')" 
+              (mouseover)="gitAnimate('start')">
               <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
             <!--Youtube-->
-            <a class="pin-ic" href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+            <a class="pin-ic" href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank"
+              [@animator]="youtube" (@animator.done)="youtubeAnimate('stop')" 
+              (mouseover)="youtubeAnimate('start')">
               <i class="fab fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
             <!--Email-->
             <a class="pin-ic" routerLink="/contact">
-              <i class="fas fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              <i class="fas fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"
+              [@animator]="email" (@animator.done)="emailAnimate('stop')" 
+              (mouseover)="emailAnimate('start')"> </i>
             </a>
           </div>
         </div>

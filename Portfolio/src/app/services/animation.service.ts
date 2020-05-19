@@ -25,7 +25,16 @@ export class AnimationService {
     }
   }
 
-  public luanchBtnAnimate(state: string) : string {
+  public linkAnimate(state: string) : string {
+    if(state == "start"){
+      return "up";
+    }
+    if(state == "stop"){
+      return "";
+    }
+  }
+
+  public actionBtnAnimate(state: string) : string {
     if(state == "heartBeat"){
       return "heartBeat";
     }

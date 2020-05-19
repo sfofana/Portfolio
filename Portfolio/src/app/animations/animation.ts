@@ -2,7 +2,7 @@ import { keyframes, style } from "@angular/animations";
 
 export const pulse = [
     style({transform: 'scale3d(1, 1, 1)', offset: 0}),
-    style({transform: 'scale3d(1.05, 1.05, 1.05)', offset: 0.5}),
+    style({transform: 'scale3d(1.15, 1.15, 1.15)', offset: 0.5}),
     style({transform: 'scale3d(1, 1, 1)', offset: 1})
 ]
 
@@ -30,6 +30,11 @@ export const heartBeat = [
     style({transform: 'scale(1)', offset: 0.28}),
     style({transform: 'scale(1.3)', offset: 0.42}),
     style({transform: 'scale(1)', offset: .70})
+]
+
+export const moveUp = [
+    style({transform: 'translate3d(0, 0, 0)', offset: 0}),
+    style({transform: 'translate3d(0, -75%, 0)', offset: 1})
 ]
 
 export const slideInDown = [

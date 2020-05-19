@@ -43,6 +43,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.slideUp='slideUp';
+    this.isSpinning = false;
   }
 
   setMail(){
@@ -56,13 +57,15 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   submit(){
     this.setMail();
-    this.reset();
+    this.reset();  
     if(this.validMail){
       this.isSpinning = true;
       this.mailer.sendEmail(this.validMail)
       .pipe(takeUntil(this.memory.unsubscribe))
-      .subscribe(()=>this.success="Message Sent");
-      this.isSpinning = false;
+      .subscribe(()=>{
+        this.success="Message Sent";
+        this.isSpinning = false;
+      });     
     } 
   }
 
