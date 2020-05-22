@@ -80,7 +80,8 @@ export class SkillComponent implements OnInit {
   }
 
   public chartOptions: any = {
-    responsive: true
+    responsive: true,
+    defaultFontColor: '#d0d6e2'
   };
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }

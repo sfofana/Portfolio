@@ -533,6 +533,8 @@ var ContactComponent = /** @class */ (function () {
     ContactComponent.prototype.ngOnInit = function () {
         this.slideUp = 'slideUp';
         this.isSpinning = false;
+        this.formData = new FormData();
+        this.override = new Blob();
     };
     ContactComponent.prototype.setMail = function () {
         this.mail.name = this.name;
@@ -542,19 +544,30 @@ var ContactComponent = /** @class */ (function () {
         this.mail.message = this.message;
         this.validMail = this.validate.validRequest(this.mail);
     };
+    ContactComponent.prototype.setBlob = function (mail) {
+        this.override = new Blob([
+            JSON.stringify(mail)
+        ], {
+            type: 'application/json'
+        });
+        this.formData.append('override', this.override);
+    };
     ContactComponent.prototype.submit = function () {
         var _this = this;
         this.setMail();
         this.reset();
         if (this.validMail) {
             this.isSpinning = true;
-            this.mailer.sendEmail(this.validMail)
+            this.setBlob(this.validMail);
+            this.mailer.sendEmail(this.formData)
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(this.memory.unsubscribe))
                 .subscribe(function () {
                 _this.success = "Message Sent";
                 _this.isSpinning = false;
             });
         }
+        this.override = new Blob();
+        this.formData = new FormData();
     };
     ContactComponent.prototype.reset = function () {
         this.name = "";
@@ -895,7 +908,8 @@ var SkillComponent = /** @class */ (function () {
         this.animation = animation;
         this.data = data;
         this.chartOptions = {
-            responsive: true
+            responsive: true,
+            defaultFontColor: '#d0d6e2'
         };
     }
     SkillComponent.prototype.ngOnInit = function () {
@@ -1195,6 +1209,7 @@ var ChartService = /** @class */ (function () {
                 backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
                 hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
                 borderWidth: 2,
+                fontColor: '#d0d6e2'
             }
         ];
     }

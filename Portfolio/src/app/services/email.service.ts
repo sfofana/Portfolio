@@ -13,7 +13,7 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  public sendEmail(message: Email): Observable<Email>{
+  public sendEmail(message: FormData): Observable<Email>{
     return this.http.post<Email>(this.url, message);
   }
 }
