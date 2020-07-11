@@ -1,9 +1,9 @@
 <div class="row">
-  <table class="table-responsive">
+  <table class="table-responsive" aria-describedby="Projects">
     <tbody>
       <tr>
-        <th>
-          <mdb-card 
+        <th id="Freddie">
+          <mdb-card class="card" 
           [@animator]="freddieCard" (mouseover)="freddieCardAnimate('start')"> 
             <mdb-card-img src="assets/images/fredpage.png" alt="Card image cap"></mdb-card-img>
           <mdb-card-body>
@@ -11,17 +11,17 @@
               <h4>Freddie Mac Enhancements</h4>
             </mdb-card-title>
             <mdb-card-text class="text-light">Role: Implemented consumption of microservices and persisting data with in-house apps. 
-              Technologies used: Angular, JSP, HTML, CSS, NodeJS, Java, Spring Boot, Jenkins.
+              Technologies used: Angular, JSP, HTML, CSS, NodeJS, Java, Spring Boot, Jenkins, SonarQube.
             </mdb-card-text>
             <a type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect
             [@animator]="freddieLnch" (@animator.done)="freddieLnchAnimate('stop')" 
             (click)="freddieLnchAnimate('pulse')" (mouseover)="freddieLnchAnimate('heartBeat')"
-            href="http://www.freddiemac.com" target="_blank">EXPLORE</a>
+            href="http://www.freddiemac.com" target="_blank" rel="noopener noreferrer">EXPLORE</a>
           </mdb-card-body>
         </mdb-card>
         </th>
-        <th>
-          <mdb-card  
+        <th id="AwsRekognition">
+          <mdb-card class="card"  
             [@animator]="rekCard" (mouseover)="rekCardAnimate('start')">
               <mdb-card-img src="assets/images/rek.png" alt="Card image cap"></mdb-card-img>
               <mdb-card-body>
@@ -40,8 +40,8 @@
         </th>
       </tr>
       <tr>
-        <th>
-          <mdb-card 
+        <th id="BankV2.1">
+          <mdb-card class="card" 
           [@animator]="bankCard" (mouseover)="bankCardAnimate('start')"> 
             <mdb-card-img src="assets/images/bank2-1.png" alt="Card image cap"></mdb-card-img>
           <mdb-card-body>
@@ -58,8 +58,8 @@
           </mdb-card-body>
         </mdb-card>
         </th>
-        <th>
-          <mdb-card  
+        <th id="News">
+          <mdb-card class="card"  
             [@animator]="newsCard" (mouseover)="newsCardAnimate('start')">
               <mdb-card-img src="assets/images/news.png" alt="Card image cap"></mdb-card-img>
               <mdb-card-body>
@@ -78,8 +78,8 @@
         </th>
       </tr>
       <tr>
-        <th>
-          <mdb-card  
+        <th id="Health">
+          <mdb-card class="card"  
             [@animator]="healthCard" (mouseover)="healthCardAnimate('start')"> 
               <mdb-card-img src="assets/images/jhealth.png" alt="Card image cap"></mdb-card-img>
             <mdb-card-body>
@@ -96,8 +96,8 @@
             </mdb-card-body>
           </mdb-card>
         </th>
-        <th>
-          <mdb-card  
+        <th id="Axion-All-Access">
+          <mdb-card class="card"  
           [@animator]="axionCard" (mouseover)="axionCardAnimate('start')">
               <mdb-card-img src="assets/images/a3.png" alt="Card image cap"></mdb-card-img>
               <mdb-card-body>
@@ -122,8 +122,8 @@
         </th>
       </tr>
       <tr>
-        <th>
-          <mdb-card  
+        <th id="JaggedEdge">
+          <mdb-card class="card"  
             [@animator]="jaggedCard" (mouseover)="jaggedCardAnimate('start')"> 
               <mdb-card-img src="assets/images/jagged.png" alt="Card image cap"></mdb-card-img>
             <mdb-card-body>
@@ -154,7 +154,7 @@
       <!--Body-->
       <div class="modal-body mb-0 p-0">
         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/6CXNfudatCQ" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" title="bankv21" src="https://youtube.com/embed/6CXNfudatCQ" allowfullscreen></iframe>
         </div>
       </div>
       <!--Footer-->
@@ -163,24 +163,25 @@
         <div>
            <!--Linkedin-->
            <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="linkedin-in"></mdb-icon>
          </a>
          <!--GitHub-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://github.com/sfofana/JS.Fofana-Bank-V2.1" target="_blank">
+           href="https://github.com/sfofana/JS.Fofana-Bank-V2.1" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="github"></mdb-icon>
          </a>
          <!--Youtube-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+           href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
         <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
           [@animator]="try" (@animator.done)="tryAnimate('stop')" 
           (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
-          href="http://jsfofana-bank-v2-1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
+          href="http://jsfofana-bank-v2-1.s3-website.us-east-2.amazonaws.com" 
+          target="_blank" rel="noopener noreferrer">TRY</a>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="bankv21.hide()">Close</button>
       </div>
@@ -196,7 +197,7 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mb-0 p-0">
       <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-        <iframe class="embed-responsive-item" src="https://youtube.com/embed/DooUONYY4K0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" title="news" src="https://youtube.com/embed/DooUONYY4K0" allowfullscreen></iframe>
       </div>
     </div>
     <!--Footer-->
@@ -205,24 +206,25 @@ aria-hidden="true">
       <div>
          <!--Linkedin-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="linkedin-in"></mdb-icon>
        </a>
        <!--GitHub-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://github.com/sfofana/JSF-News" target="_blank">
+         href="https://github.com/sfofana/JSF-News" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="github"></mdb-icon>
        </a>
        <!--Youtube-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://www.youtube.com/watch?v=DooUONYY4K0&feature=youtu.be" target="_blank">
+         href="https://www.youtube.com/watch?v=DooUONYY4K0&feature=youtu.be" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
       <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="try" (@animator.done)="tryAnimate('stop')" 
         (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
-        href="http://currentnewsappv1.1.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
+        href="http://currentnewsappv1.1.s3-website.us-east-2.amazonaws.com" 
+        target="_blank" rel="noopener noreferrer">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="news.hide()">Close</button>
     </div>
@@ -238,7 +240,7 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mb-0 p-0">
       <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-        <iframe class="embed-responsive-item" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" title="rek" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
       </div>
     </div>
     <!--Footer-->
@@ -248,24 +250,25 @@ aria-hidden="true">
       <div>
          <!--Linkedin-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="linkedin-in"></mdb-icon>
        </a>
        <!--GitHub-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://github.com/sfofana/AwsImgRekJava" target="_blank">
+         href="https://github.com/sfofana/AwsImgRekJava" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="github"></mdb-icon>
        </a>
        <!--Youtube-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+         href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
       <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="try" (@animator.done)="tryAnimate('stop')" 
         (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
-        href="http://awsrekfrontendsfofana.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
+        href="http://awsrekfrontendsfofana.s3-website.us-east-2.amazonaws.com" 
+        target="_blank" rel="noopener noreferrer">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="rek.hide()">Close</button>
     </div>
@@ -281,7 +284,7 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mb-0 p-0">
       <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-        <iframe class="embed-responsive-item" src="https://youtube.com/embed/EUMeu1krjNU" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" title="dictionary" src="https://youtube.com/embed/EUMeu1krjNU" allowfullscreen></iframe>
       </div>
     </div>
     <!--Footer-->
@@ -290,24 +293,25 @@ aria-hidden="true">
       <div>
          <!--Linkedin-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="linkedin-in"></mdb-icon>
        </a>
        <!--GitHub-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://github.com/sfofana/Node-Fofana-Dictionary" target="_blank">
+         href="https://github.com/sfofana/Node-Fofana-Dictionary" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="github"></mdb-icon>
        </a>
        <!--Youtube-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://www.youtube.com/watch?v=EUMeu1krjNU" target="_blank">
+         href="https://www.youtube.com/watch?v=EUMeu1krjNU" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="animationState" (@animator.done)="resetAnimation()" 
         (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
-        <a href="http://node-fofanadictionary.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
+        <a href="http://node-fofanadictionary.s3-website.us-east-2.amazonaws.com" 
+        target="_blank" rel="noopener noreferrer">TRY</a>
       </button>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="dictionary.hide()">Close</button>
@@ -324,7 +328,7 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mb-0 p-0">
       <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-        <iframe class="embed-responsive-item" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" title="hospital" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
       </div>
     </div>
     <!--Footer-->
@@ -334,17 +338,17 @@ aria-hidden="true">
       <div>
          <!--Linkedin-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="linkedin-in"></mdb-icon>
        </a>
        <!--GitHub-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://github.com/sfofana/JS.Fofana-Bank-V2.2" target="_blank">
+         href="https://github.com/sfofana/JS.Fofana-Bank-V2.2" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="github"></mdb-icon>
        </a>
        <!--Youtube-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+         href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
@@ -364,7 +368,7 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mb-0 p-0">
       <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-        <iframe class="embed-responsive-item" src="https://youtube.com/embed/twTD0J4xmFo" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" title="axion" src="https://youtube.com/embed/twTD0J4xmFo" allowfullscreen></iframe>
       </div>
     </div>
     <!--Footer-->
@@ -373,24 +377,25 @@ aria-hidden="true">
       <div>
          <!--Linkedin-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+         href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="linkedin-in"></mdb-icon>
        </a>
        <!--GitHub-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://github.com/sfofana/JS.Fofana-Bank-V2.2" target="_blank">
+         href="https://github.com/sfofana/JS.Fofana-Bank-V2.2" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="github"></mdb-icon>
        </a>
        <!--Youtube-->
        <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-         href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+         href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank" rel="noopener noreferrer">
          <mdb-icon fab icon="youtube"></mdb-icon>
        </a>
       </div>
       <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
         [@animator]="try" (@animator.done)="tryAnimate('stop')" 
         (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
-        href="https://axion-all-access-v1.herokuapp.com/" target="_blank">TRY</a>
+        href="https://axion-all-access-v1.herokuapp.com/" 
+        target="_blank" rel="noopener noreferrer">TRY</a>
       <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
         (click)="axion.hide()">Close</button>
     </div>
@@ -406,7 +411,7 @@ aria-hidden="true">
       <!--Body-->
       <div class="modal-body mb-0 p-0">
         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/x78v4qRCRbE" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" title="jagged" src="https://youtube.com/embed/x78v4qRCRbE" allowfullscreen></iframe>
         </div>
       </div>
       <!--Footer-->
@@ -415,17 +420,17 @@ aria-hidden="true">
         <div>
            <!--Linkedin-->
            <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="linkedin-in"></mdb-icon>
          </a>
          <!--GitHub-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://github.com/sfofana/Jagged-Edge-V1.1" target="_blank">
+           href="https://github.com/sfofana/Jagged-Edge-V1.1" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="github"></mdb-icon>
          </a>
          <!--Youtube-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+           href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
@@ -444,7 +449,7 @@ aria-hidden="true">
       <!--Body-->
       <div class="modal-body mb-0 p-0">
         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/xICgc1elnJo" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" title="health" src="https://youtube.com/embed/xICgc1elnJo" allowfullscreen></iframe>
         </div>
       </div>
       <!--Footer-->
@@ -453,24 +458,25 @@ aria-hidden="true">
         <div>
            <!--Linkedin-->
            <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="linkedin-in"></mdb-icon>
          </a>
          <!--GitHub-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://github.com/sfofana/JS.Fofana-Health" target="_blank">
+           href="https://github.com/sfofana/JS.Fofana-Health" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="github"></mdb-icon>
          </a>
          <!--Youtube-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://www.youtube.com/watch?v=spZ6H84fEsA&feature=youtu.be" target="_blank">
+           href="https://www.youtube.com/watch?v=spZ6H84fEsA&feature=youtu.be" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
         <a type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
           [@animator]="try" (@animator.done)="tryAnimate('stop')" 
           (click)="tryAnimate('pulse')" (mouseover)="tryAnimate('heartBeat')"
-          href="http://jsfofana-health.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
+          href="http://jsfofana-health.s3-website.us-east-2.amazonaws.com" 
+          target="_blank" rel="noopener noreferrer">TRY</a>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="health.hide()">Close</button>
       </div>
@@ -486,7 +492,7 @@ aria-hidden="true">
       <!--Body-->
       <div class="modal-body mb-0 p-0">
         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" title="Poly" src="https://youtube.com/embed/spZ6H84fEsA" allowfullscreen></iframe>
         </div>
       </div>
       <!--Footer-->
@@ -495,24 +501,25 @@ aria-hidden="true">
         <div>
            <!--Linkedin-->
            <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+           href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="linkedin-in"></mdb-icon>
          </a>
          <!--GitHub-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://github.com/sfofana/JS.Fofana-Health" target="_blank">
+           href="https://github.com/sfofana/JS.Fofana-Health" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="github"></mdb-icon>
          </a>
          <!--Youtube-->
          <a type="button" mdbBtn floating="true" size="sm" mdbBtn color="ins" class="waves-light" mdbWavesEffect
-           href="https://www.youtube.com/watch?v=spZ6H84fEsA&feature=youtu.be" target="_blank">
+           href="https://www.youtube.com/watch?v=spZ6H84fEsA&feature=youtu.be" target="_blank" rel="noopener noreferrer">
            <mdb-icon fab icon="youtube"></mdb-icon>
          </a>
         </div>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect
           [@animator]="animationState" (@animator.done)="resetAnimation()" 
           (click)="startAnimation('pulse')" (mouseover)="startAnimation('heartBeat')">
-          <a href="http://poly-personal-advisor.s3-website.us-east-2.amazonaws.com" target="_blank">TRY</a>
+          <a href="http://poly-personal-advisor.s3-website.us-east-2.amazonaws.com" 
+          target="_blank" rel="noopener noreferrer">TRY</a>
         </button>
         <button type="button" mdbBtn color="primary" outline="true" rounded="true" class="ml-4 waves-light" mdbWavesEffect data-dismiss="modal"
           (click)="poly.hide()">Close</button>

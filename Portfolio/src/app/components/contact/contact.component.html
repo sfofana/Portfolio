@@ -13,13 +13,13 @@
   
             <!-- Name -->
             <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" placeholder="Name">
-  
+            <h6 *ngIf="touchName" class="invalid">{{touchName}}</h6>
           </div>
           <div class="col-md-4 mb-4">
   
             <!-- Email -->
             <input type="email" id="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Email">
-  
+            <h6 *ngIf="touchEmail" class="invalid">{{touchEmail}}</h6>
           </div>
           <div class="col-md-4 mb-4">
   
@@ -34,7 +34,7 @@
   
             <!-- Subject -->
             <input type="text" id="subject" [(ngModel)]="subject" name="subject" class="form-control" placeholder="Subject">
-  
+            <h6 *ngIf="touchSubject" class="invalid">{{touchSubject}}</h6>
           </div>
         </div>
   
@@ -43,6 +43,7 @@
   
             <div class="form-group mb-4">
               <textarea class="form-control rounded" id="message" rows="3" (keyup.enter)="submit()" [(ngModel)]="message" name="message" placeholder="Message"></textarea>
+              <h6 *ngIf="touchMessage" class="invalid">{{touchMessage}}</h6>
             </div>
   
             <div class="text-center">

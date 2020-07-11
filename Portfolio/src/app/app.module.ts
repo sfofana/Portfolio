@@ -20,6 +20,7 @@ import { ValidationService } from './services/validation.service';
 import { AnimationService } from './services/animation.service';
 import { ChartService } from './services/chart.service';
 import { HttpInterceptorService } from './services/http-interceptor.service';
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { HttpInterceptorService } from './services/http-interceptor.service';
   ],
   providers: [
     EmailService,
+    LoggingService,
     ChartService,
     ValidationService,
     SubjectService,

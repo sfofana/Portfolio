@@ -28,12 +28,17 @@ export class ContactComponent implements OnInit, OnDestroy {
   private phone: string;
   private subject: string;
   private message: string;
+  private touchName: string;
+  private touchEmail: string;
+  private touchPhone: string;
+  private touchSubject: string;
+  private touchMessage: string;
   private formData: FormData;
   private override: Blob;
   private success: string;
   private invalid: string;
   private mail = new Email();
-  private validMail = new Email();
+  private validMail: Email;
   private isSpinning: boolean;
 
     constructor(
@@ -56,6 +61,10 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.mail.phone = this.phone;
     this.mail.subject = this.subject;
     this.mail.message = this.message;
+    this.touchName = this.validate.validInput(this.name, 'name');
+    this.touchEmail = this.validate.validInput(this.email, 'email');
+    this.touchSubject = this.validate.validInput(this.subject, 'subject');
+    this.touchMessage = this.validate.validInput(this.message, 'message');
     this.validMail = this.validate.validRequest(this.mail);
   }
 

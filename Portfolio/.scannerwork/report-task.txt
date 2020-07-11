@@ -1,0 +1,7 @@
+organization=sfofana
+projectKey=Sufyan-Fofana-Portfolio
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.9563
+dashboardUrl=https://sonarcloud.io/dashboard?id=Sufyan-Fofana-Portfolio
+ceTaskId=AXM_ynEZC1lmF5jR8imv
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXM_ynEZC1lmF5jR8imv

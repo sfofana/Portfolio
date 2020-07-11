@@ -1,9 +1,9 @@
 <div class="row">
-  <table class="table-responsive">
+  <table class="table-responsive" aria-describedby="Skills">
     <tbody>
       <tr>
-        <th>
-          <mdb-card [@animator]="webCard" (mouseover)="webCardAnimate('start')">
+        <th id="WebTech">
+          <mdb-card class="card" (mouseover)="webCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>Web Technologies</h4>
@@ -21,8 +21,8 @@
             </mdb-card-body>
           </mdb-card>
         </th>
-        <th>
-          <mdb-card [@animator]="coreCard" (mouseover)="coreCardAnimate('start')">
+        <th id="Core">
+          <mdb-card class="card" [@animator]="coreCard" (mouseover)="coreCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>Core Framework</h4>
@@ -42,8 +42,8 @@
         </th>
       </tr>
       <tr>
-        <th>
-          <mdb-card [@animator]="serverCard" (mouseover)="serverCardAnimate('start')">
+        <th id="Server-Side">
+          <mdb-card class="card" [@animator]="serverCard" (mouseover)="serverCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>Server-Side</h4>
@@ -61,8 +61,8 @@
             </mdb-card-body>
           </mdb-card>
         </th>
-        <th>
-          <mdb-card [@animator]="testCard" (mouseover)="testCardAnimate('start')">
+        <th id="TestingTools">
+          <mdb-card class="card" [@animator]="testCard" (mouseover)="testCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>Testing Tools</h4>
@@ -82,8 +82,8 @@
         </th>
       </tr>
       <tr>
-        <th>
-          <mdb-card [@animator]="devCard" (mouseover)="devCardAnimate('start')">
+        <th id="DevOps">
+          <mdb-card class="card" [@animator]="devCard" (mouseover)="devCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>DevOps</h4>
@@ -101,8 +101,8 @@
             </mdb-card-body>
           </mdb-card>
         </th>
-        <th>
-          <mdb-card [@animator]="servicesCard" (mouseover)="servicesCardAnimate('start')">
+        <th id="Web&Micro">
+          <mdb-card class="card" [@animator]="servicesCard" (mouseover)="servicesCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>Web & Micro services</h4>
@@ -122,8 +122,8 @@
         </th>
       </tr>
       <tr>
-        <th>
-          <mdb-card [@animator]="langCard" (mouseover)="langCardAnimate('start')">
+        <th id="Languages">
+          <mdb-card class="card" [@animator]="langCard" (mouseover)="langCardAnimate('start')">
             <mdb-card-body>
               <mdb-card-title>
                 <h4>Languages</h4>

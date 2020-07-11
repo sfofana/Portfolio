@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, transition, keyframes, animate } from '@angular/animations';
 import * as keyframe from '../../animations/animation'
 import { AnimationService } from '../../services/animation.service';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-projects',

@@ -1,20 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkComponent } from './work.component';
+import { TestBedProvider } from 'src/app/specs/testbed-provider';
 
 describe('WorkComponent', () => {
   let component: WorkComponent;
   let fixture: ComponentFixture<WorkComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ WorkComponent ]
-    })
-    .compileComponents();
-  }));
-
   beforeEach(() => {
-    fixture = TestBed.createComponent(WorkComponent);
+    const provider: TestBedProvider = new TestBedProvider()
+    fixture = provider.fixtureBuilder(WorkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

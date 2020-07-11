@@ -16,7 +16,6 @@
             <!--Grid column-->
             <div class="col-md-6 mb-4 mb-md-0 space"> 
               <h3 class="font-weight-bold text-center" [@animator]="followLeft">Sufyan Fofana</h3>
-                <!-- <h5 class="font-weight-bold">Software Developer</h3> -->   
               <p class="text-light paragraph" [@animator]="leadLeft">I am a Software developer with experience building full-stack applications. 
                   Developed applications using various technologies such as HTML, TypeScript, Java, Spring, Hibernate, and SQL. 
                   Applications were developed using methodologies such as Agile and SCRUM to efficiently work in team 
@@ -28,7 +27,7 @@
             <div class="col-md-6 mb-4 mb-md-0 space" [@animator]="zoomIn">
               <!--Image-->
               <div class="view display overlay z-depth-1-half">
-                <img src="assets/images/pro.png" class="img-fluid"
+                <img src="assets/images/pro.png" alt="" class="img-fluid"
                   alt="">             
                   <div class="mask rgba-white-light"></div>               
               </div> 
@@ -38,7 +37,7 @@
              <div class="col-md-6 mb-4 mb-md-0 space" [@animator]="zoomIn">
               <!--Image-->
               <div class="view overlay z-depth-1-half">
-                <img src="assets/images/aboutme.jpg" class="img-fluid"
+                <img src="assets/images/aboutme.jpg" alt="" class="img-fluid"
                   alt="">             
                   <div class="mask rgba-white-light"></div>               
               </div> 
@@ -47,7 +46,6 @@
             <!--Grid column-->
             <div class="col-md-6 mb-4 mb-md-0 space"> 
               <h3 class="font-weight-bold text-center" [@animator]="followRight">About Me</h3>
-                <!-- <h5 class="font-weight-bold">Software Developer</h3> -->   
               <p class="text-light paragraph" [@animator]="leadRight">I enjoy traveling, long days by the beach, the outdoors, 
                 exploring and riding my dirt bike through the woods, and quality time with family. 
                 I also enjoy watching sports, tinkering with mechanical and electrical components, 
@@ -110,33 +108,6 @@
       
     </nav>
 
-<!-- <div>
-<mdb-navbar SideClass="navbar navbar-expand-lg mdb-color lighten-1">
-  <mdb-navbar-brand>
-      <a class="navbar-brand"></a>
-  </mdb-navbar-brand>
-  <links>
-      <ul class="navbar-nav">
-          <li class="nav-item active">
-              <a class="nav-link waves-light text-light" routerLink="/home" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link waves-light text-light" routerLink="/work" mdbWavesEffect>Work Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-light text-light" routerLink="/freelance" mdbWavesEffect>Freelance</a>
-        </li>
-          <li class="nav-item">
-              <a class="nav-link waves-light text-light" routerLink="/projects" mdbWavesEffect>Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-light text-light" routerLink="/skills" mdbWavesEffect>Technologies</a>
-        </li>
-      </ul>
-  </links>
-</mdb-navbar>
-</div> -->
-
 
 
 <router-outlet></router-outlet>
@@ -154,28 +125,31 @@
         <div class="col-md-12 py-5">
           <div class="mb-5 flex-center">
             <!--Linkedin -->
-            <a class="li-ic" href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank"
+            <a class="li-ic" href="http://linkedin.com/in/sufyan-fofana-2a743584" 
+              target="_blank" rel="noopener noreferrer"
               [@animator]="linkedin" (@animator.done)="linkedinAnimate('stop')" 
               (mouseover)="linkedinAnimate('start')">
-              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              <em class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </em>
             </a>
             <!--GitHub-->
-            <a class="ins-ic" href="https://github.com/sfofana" target="_blank"
+            <a class="ins-ic" href="https://github.com/sfofana" 
+              target="_blank" rel="noopener noreferrer"
               [@animator]="git" (@animator.done)="gitAnimate('stop')" 
               (mouseover)="gitAnimate('start')">
-              <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              <em class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </em>
             </a>
             <!--Youtube-->
-            <a class="pin-ic" href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank"
+            <a class="pin-ic" href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" 
+              target="_blank" rel="noopener noreferrer"
               [@animator]="youtube" (@animator.done)="youtubeAnimate('stop')" 
               (mouseover)="youtubeAnimate('start')">
-              <i class="fab fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              <em class="fab fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x"> </em>
             </a>
             <!--Email-->
             <a class="pin-ic" routerLink="/contact">
-              <i class="fas fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"
+              <em class="fas fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"
               [@animator]="email" (@animator.done)="emailAnimate('stop')" 
-              (mouseover)="emailAnimate('start')"> </i>
+              (mouseover)="emailAnimate('start')"> </em>
             </a>
           </div>
         </div>

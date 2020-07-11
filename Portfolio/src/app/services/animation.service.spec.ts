@@ -1,12 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 
 import { AnimationService } from './animation.service';
+import { TestBedProvider } from '../specs/testbed-provider';
 
 describe('AnimationService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let service: AnimationService;
+
+  beforeEach(() => {
+    const provider: TestBedProvider = new TestBedProvider();
+    service = provider.serviceTestBed(AnimationService);
+  });
 
   it('should be created', () => {
-    const service: AnimationService = TestBed.get(AnimationService);
     expect(service).toBeTruthy();
   });
 });
